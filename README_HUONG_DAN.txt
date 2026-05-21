@@ -1,6 +1,15 @@
-V16.2 SEO50 Chat Compact
-- Upload toàn bộ thư mục lên GitHub repo taichinh247vn
-- Commit changes
-- Mở https://thanhbn2910.github.io/taichinh247vn/?v=162
-- Chatbot đã thu gọn mặc định, bấm AI tư vấn mới mở.
-- Muốn lưu Google Sheet: copy google-apps-script/Code.gs vào Apps Script, deploy Web App, dán link vào assets/app.js tại GAS_URL.
+V16.3 SEO50 POSTS FIXED
+
+Cách cài:
+1. Giải nén ZIP.
+2. Vào GitHub repo taichinh247vn.
+3. Add file -> Upload files.
+4. Kéo TOÀN BỘ file/folder trong thư mục này lên GitHub.
+5. Commit changes.
+6. Chờ GitHub Pages build 1-2 phút.
+7. Check:
+- Trang chủ: https://thanhbn2910.github.io/taichinh247vn/?v=163
+- Blog: https://thanhbn2910.github.io/taichinh247vn/posts/index.html
+- Sitemap: https://thanhbn2910.github.io/taichinh247vn/sitemap.xml
+
+Đã sửa lỗi 404 /posts/index.html.
