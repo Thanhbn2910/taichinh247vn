@@ -1,1 +1,56 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tài Chính 247 VN | Tư vấn vay, thẻ, bảo hiểm</title><meta name="description" content="Tư vấn tài chính cá nhân, vay tín chấp, thẻ tín dụng, bảo hiểm và thuế kế toán. Thu lead và CRM thật + AI chatbot qua Google Sheet."><link rel="stylesheet" href="assets/style.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-C2Q2NJNZTC"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-C2Q2NJNZTC');</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"Tài Chính 247 VN","url":"https://taichinh247vn.netlify.app","areaServed":"VN"}</script></head><body><nav class="nav"><div class="container nav-inner"><a class="brand" href="index.html">Tài Chính 247</a><div class="menu"><a href="vay-tin-chap.html">Vay tín chấp</a><a href="#leadForm">Đăng ký</a><a href="admin.html" class="btn secondary">Admin CRM</a></div></div></nav><header class="hero"><div class="container hero-grid"><div><span class="badge">V14 Real CRM</span><h1>Website tài chính có CRM thật + AI chatbot, quản lý lead và lịch gọi.</h1><p class="muted">Khách để lại thông tin → lưu Google Sheet hoặc local fallback → admin xem lead, cập nhật pipeline, đặt lịch gọi, xuất CSV.</p><a href="#leadForm" class="btn">Nhận tư vấn ngay</a> <a href="admin.html" class="btn secondary">Vào CRM</a></div><div class="card"><h2>Đăng ký tư vấn miễn phí</h2><form id="leadForm" class="lead-form" data-redirect="true"><input name="name" placeholder="Họ tên" required><input name="phone" placeholder="Số điện thoại" required><input name="email" type="email" placeholder="Email"><select name="service"><option>Vay tín chấp</option><option>Vay mua xe</option><option>Vay mua nhà</option><option>Thẻ tín dụng</option><option>Bảo hiểm</option><option>Tư vấn thuế/kế toán</option></select><input name="income" placeholder="Thu nhập/tháng"><textarea name="note" placeholder="Nhu cầu cụ thể"></textarea><input type="hidden" name="source" value="Homepage"><button class="btn">Gửi thông tin</button></form></div></div></header><main><section><div class="container"><h2 class="section-title">Giai đoạn 3 bắt đầu từ V14</h2><div class="grid grid-3"><div class="card"><h3>CRM thật + AI chatbot</h3><p>Lưu lead qua Google Apps Script vào Google Sheet, có fallback local để test ngay.</p></div><div class="card"><h3>Pipeline</h3><p>Mới → Đang gọi → Quan tâm → Chốt → Hủy. Cập nhật trực tiếp trong admin.</p></div><div class="card"><h3>Lịch gọi</h3><p>Đặt ngày giờ gọi lại, lọc lead, xuất CSV để vận hành khách thật.</p></div></div></div></section><section><div class="container"><h2 class="section-title">Dịch vụ chính</h2><div class="grid grid-3"><a class="card" href="vay-tin-chap.html"><h3>Vay tín chấp</h3><p>Gợi ý hồ sơ, điều kiện, thu nhập và thông tin cần chuẩn bị.</p></a><div class="card"><h3>Thẻ tín dụng</h3><p>Tư vấn mở thẻ, phí thường niên, hoàn tiền, miễn lãi.</p></div><div class="card"><h3>Thuế - kế toán</h3><p>Tận dụng lợi thế kế toán để kéo SEO và khách doanh nghiệp.</p></div></div></div></section></main><div class="chatbot"><div class="chat-head">AI tư vấn tài chính</div><div id="chatMessages" class="chat-body"><div class="bubble bot">Chào bạn, bạn muốn tư vấn vay, thẻ tín dụng hay bảo hiểm?</div></div><div class="chat-input"><input id="chatText" placeholder="Nhập câu hỏi..."><button id="chatSend" class="btn">Gửi</button></div></div><div class="sticky-cta"><a href="tel:0900000000">📞 Gọi</a><a href="#leadForm">📝 Đăng ký</a><a href="admin.html">📊 CRM</a></div><footer class="footer"><div class="container">© Tài Chính 247 VN - V14 Real CRM</div></footer><script src="assets/app.js"></script></body></html>
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tài Chính 247 VN | Tư vấn vay, thẻ tín dụng, bảo hiểm</title>
+  <meta name="description" content="Tư vấn tài chính miễn phí, CRM quản lý lead và AI chatbot thu lead cho Tài Chính 247 VN.">
+  <link rel="stylesheet" href="assets/style.css?v=14.2">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Tài Chính 247</a>
+    <nav>
+      <a href="vay-tin-chap.html">Vay tín chấp</a>
+      <a href="#lead-form">Đăng ký</a>
+      <a class="btn secondary" href="admin.html">Admin CRM</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <span class="badge">V14.2 AI CRM Complete</span>
+      <h1>Website tài chính có CRM thật + AI chatbot, quản lý lead và lịch gọi.</h1>
+      <p>Khách để lại thông tin → lưu Google Sheet hoặc local fallback → admin xem lead, cập nhật pipeline, đặt lịch gọi, xuất CSV.</p>
+      <div class="actions"><a class="btn" href="#lead-form">Nhận tư vấn ngay</a><a class="btn light" href="admin.html">Vào CRM</a></div>
+    </div>
+    <form id="lead-form" class="card lead-form" data-source="home-form">
+      <h2>Đăng ký tư vấn miễn phí</h2>
+      <input name="name" placeholder="Họ tên" required>
+      <input name="phone" placeholder="Số điện thoại" required>
+      <input name="email" placeholder="Email">
+      <select name="service"><option>Vay tín chấp</option><option>Vay mua xe</option><option>Vay mua nhà</option><option>Thẻ tín dụng</option><option>Bảo hiểm</option><option>Kế toán/thuế</option></select>
+      <input name="income" placeholder="Thu nhập/tháng">
+      <textarea name="note" placeholder="Nhu cầu cụ thể"></textarea>
+      <button class="btn" type="submit">Gửi thông tin</button>
+      <p class="form-msg" id="lead-msg"></p>
+    </form>
+  </div>
+</section>
+<section class="section">
+  <h2>Giai đoạn 3 bắt đầu từ V14.2</h2>
+  <div class="grid-3">
+    <div class="card"><h3>CRM thật</h3><p>Lưu lead qua Google Apps Script vào Google Sheet, có fallback local để test ngay.</p></div>
+    <div class="card"><h3>AI chatbot</h3><p>Trả lời nhanh câu hỏi vay, thẻ, bảo hiểm; hỏi thêm thông tin và thu lead.</p></div>
+    <div class="card"><h3>Pipeline</h3><p>Mới → Đang gọi → Quan tâm → Chốt → Hủy. Có lịch gọi lại và xuất CSV.</p></div>
+  </div>
+</section>
+</main>
+<div class="sticky-cta"><a href="tel:0980000000">📞 Gọi</a><a href="#lead-form">📝 Đăng ký</a><a href="admin.html">📊 CRM</a></div>
+<div id="chatbot-root"></div>
+<footer>© 2026 Tài Chính 247 VN</footer>
+<script src="assets/app.js?v=14.2"></script>
+</body></html>
