@@ -1,14 +1,14 @@
-V15.2-GH BUSINESS COMPLETE
+V15.3-GH BUSINESS ADVANCED
 
-Đã hoàn thiện:
-- Hero section dạng doanh nghiệp thật.
-- Ảnh minh họa dashboard bằng CSS + mockup mobile.
+Nâng cao tiếp:
+- Hero doanh nghiệp mạnh hơn.
+- Minh họa dashboard + mobile mockup + lead ticket.
 - Số liệu nổi bật.
-- Logo đối tác giả lập.
+- Logo đối tác giả lập có nhãn.
+- Khối chứng minh năng lực vận hành.
 - Form lead đẹp.
 - Section niềm tin.
 - Phân nhóm khách hàng.
-- Dịch vụ trọng tâm.
 - Quy trình làm việc.
 - FAQ + FAQ schema.
 - Đánh giá khách hàng.
@@ -24,5 +24,5 @@ Cài:
 4. Commit changes.
 5. Chờ GitHub Pages build 1-2 phút.
 6. Check:
-   https://thanhbn2910.github.io/taichinh247vn/?v=152gh
-   https://thanhbn2910.github.io/taichinh247vn/admin.html?v=152gh
+   https://thanhbn2910.github.io/taichinh247vn/?v=153gh
+   https://thanhbn2910.github.io/taichinh247vn/admin.html?v=153gh
