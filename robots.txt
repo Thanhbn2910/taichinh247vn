@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /admin.html
-Sitemap: https://taichinh247vn.netlify.app/sitemap.xml
+Sitemap: https://thanhbn2910.github.io/taichinh247vn/sitemap.xml

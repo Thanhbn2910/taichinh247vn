@@ -1,33 +1,35 @@
-FINANCE CONSUMER SITE V13 - REAL CRM
+V14-GH PRO STABLE
 
-Bản này nâng từ V12 lên V13 CRM thật.
+Mục tiêu:
+- Bản giao diện đẹp và ổn định riêng cho GitHub Pages.
+- Sử dụng đường dẫn tương đối: assets/style.css, assets/app.js, admin.html...
+- Không dùng /assets/... để tránh lỗi khi chạy ở /taichinh247vn/.
 
-TÍNH NĂNG MỚI:
-1. Form lead ngoài website.
-2. Admin CRM tại /admin.html.
-3. Pipeline trạng thái: Mới, Đang gọi, Quan tâm, Chốt, Hủy.
-4. Lịch gọi lại theo ngày giờ.
-5. Dashboard KPI realtime từ dữ liệu lead.
-6. Xuất CSV.
-7. Google Apps Script để lưu dữ liệu vào Google Sheet thật.
-8. Local fallback: chưa kết nối Sheet vẫn test được bằng trình duyệt.
+Cách cài:
+1. Giải nén ZIP.
+2. Mở thư mục vừa giải nén.
+3. Chọn TẤT CẢ file/folder bên trong:
+   assets/
+   data/
+   google-apps-script/
+   index.html
+   admin.html
+   vay-tin-chap.html
+   the-tin-dung.html
+   bao-hiem.html
+   de-xuat-san-pham.html
+   cam-on.html
+   robots.txt
+   sitemap.xml
+4. Vào GitHub repo taichinh247vn.
+5. Add file -> Upload files.
+6. Kéo toàn bộ vào -> Commit changes.
+7. Chờ GitHub Pages build 1-2 phút.
+8. Check:
+   https://thanhbn2910.github.io/taichinh247vn/?v=14gh
+   https://thanhbn2910.github.io/taichinh247vn/admin.html?v=14gh
 
-CÁCH UPLOAD NETLIFY:
-- Giải nén file zip.
-- Kéo toàn bộ thư mục vào Netlify Deploys.
-
-CÁCH KẾT NỐI GOOGLE SHEET:
-1. Tạo Google Sheet mới.
-2. Đặt sheet đầu tiên tên: Leads.
-3. Vào Extensions > Apps Script.
-4. Dán nội dung google-apps-script/Code.gs.
-5. Deploy > New deployment > Web app.
-6. Execute as: Me.
-7. Who has access: Anyone.
-8. Copy Web App URL.
-9. Mở assets/app.js, tìm GAS_URL:'' và dán URL vào giữa dấu nháy.
-10. Upload lại lên Netlify.
-
-LƯU Ý:
-- /admin.html hiện chưa có đăng nhập thật. Không public link admin rộng rãi.
-- V14 sẽ nâng AI chatbot thật hơn, có kịch bản hỏi đáp và chấm điểm lead.
+Nếu muốn Google Sheet:
+- Copy google-apps-script/Code.gs vào Google Apps Script.
+- Deploy Web App.
+- Dán link vào assets/app.js tại GAS_URL.
