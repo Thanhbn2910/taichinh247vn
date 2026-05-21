@@ -1,22 +1,27 @@
-HUONG DAN CAI V14.2 AI CRM COMPLETE
+V15 Monetize Affiliate - Huong dan cai dat
 
 1. Giai nen file zip.
-2. Vao GitHub repo taichinh247vn -> Code -> Add file -> Upload files.
-3. Keo TOAN BO file/folder ben trong thu muc V14.2 len: assets, data, google-apps-script, posts, index.html, admin.html, cam-on.html, vay-tin-chap.html, robots.txt, sitemap.xml.
-4. Commit changes. Doi 1-2 phut. Mo: https://thanhbn2910.github.io/taichinh247vn/?v=14.2
+2. Vao GitHub repo taichinh247vn > Add file > Upload files.
+3. Keo TOAN BO file/folder trong thu muc V15 vao repo, gom:
+   assets, google-apps-script, data, posts, index.html, admin.html, vay-tin-chap.html, the-tin-dung.html, bao-hiem.html, de-xuat-san-pham.html, cam-on.html, robots.txt, sitemap.xml.
+4. Commit changes.
+5. Cho GitHub Pages build 1-2 phut.
+6. Mo: https://thanhbn2910.github.io/taichinh247vn/?v=15
+7. Admin: https://thanhbn2910.github.io/taichinh247vn/admin.html
 
-CAI GOOGLE SHEET CRM THAT:
+Cai Google Sheet CRM that:
 1. Tao Google Sheet ten CRM_TaiChinh247.
-2. Extensions -> Apps Script.
-3. Copy noi dung google-apps-script/Code.gs vao Apps Script.
-4. Deploy -> New deployment -> Web app.
+2. Extensions > Apps Script.
+3. Copy code trong google-apps-script/Code.gs vao Apps Script.
+4. Deploy > New deployment > Web app.
 5. Execute as: Me. Who has access: Anyone.
-6. Copy link Web App dang https://script.google.com/macros/s/.../exec.
+6. Copy Web App URL.
 7. Mo assets/app.js, sua GAS_URL:'' thanh GAS_URL:'LINK_WEB_APP'.
-8. Upload lai assets/app.js len GitHub va Commit.
+8. Upload lai assets/app.js len GitHub va commit.
 
-Neu muon AI that bang OpenAI:
-- Trong Code.gs, dien OPENAI_API_KEY = 'sk-...';
-- Deploy lai Web App.
-
-Neu chua gan GAS_URL, web van chay bang localStorage de test.
+V15 co:
+- Landing vay/the/bao hiem.
+- Tracking UTM va nguon lead.
+- CRM pipeline.
+- Dashboard doanh thu, gia tri lead, hoa hong du kien.
+- AI chatbot fallback local.
