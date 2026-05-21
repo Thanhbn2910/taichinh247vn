@@ -1,3 +1,35 @@
+V14.1 - FIX GITHUB PAGES
+
+Bản này đã sửa lỗi đường dẫn cho GitHub Pages.
+Không còn dùng /assets/... mà dùng assets/... nên chạy đúng tại:
+https://thanhbn2910.github.io/taichinh247vn/
+
+CÁCH CÀI:
+1. Giải nén file ZIP.
+2. Vào GitHub repo taichinh247vn.
+3. Code → Add file → Upload files.
+4. Kéo TOÀN BỘ nội dung bên trong thư mục finance_consumer_site_v14_1_github_pages_fixed lên repo, gồm:
+   - assets
+   - data
+   - google-apps-script
+   - posts
+   - index.html
+   - admin.html
+   - cam-on.html
+   - vay-tin-chap.html
+   - robots.txt
+   - sitemap.xml
+5. Commit changes.
+6. Chờ 1-2 phút rồi mở web.
+
+Lưu ý: Nếu trình duyệt vẫn hiện V13, bấm Ctrl + F5 để tải lại không dùng cache.
+
+APPS SCRIPT:
+- Copy google-apps-script/Code.gs vào Google Sheet → Extensions → Apps Script.
+- Deploy → Web app → Anyone.
+- Copy link Web App, dán vào assets/app.js tại dòng GAS_URL:''
+- Upload lại assets/app.js lên GitHub và Commit.
+
 FINANCE CONSUMER SITE V14 - AI CHATBOT THAT + CRM
 
 BAN MOI CO:
