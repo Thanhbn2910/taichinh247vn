@@ -1,15 +1,7 @@
-V16.3 SEO50 POSTS FIXED
+V16.4 UPLOAD SAFE
 
-Cách cài:
-1. Giải nén ZIP.
-2. Vào GitHub repo taichinh247vn.
-3. Add file -> Upload files.
-4. Kéo TOÀN BỘ file/folder trong thư mục này lên GitHub.
-5. Commit changes.
-6. Chờ GitHub Pages build 1-2 phút.
-7. Check:
-- Trang chủ: https://thanhbn2910.github.io/taichinh247vn/?v=163
-- Blog: https://thanhbn2910.github.io/taichinh247vn/posts/index.html
-- Sitemap: https://thanhbn2910.github.io/taichinh247vn/sitemap.xml
+Giải nén ZIP. Mở thư mục taichinh247vn_v16_4_upload_safe, chọn TẤT CẢ file/folder bên trong rồi upload lên GitHub repo taichinh247vn. Không upload nguyên thư mục cha.
 
-Đã sửa lỗi 404 /posts/index.html.
+Check sau khi commit:
+https://thanhbn2910.github.io/taichinh247vn/?v=164
+https://thanhbn2910.github.io/taichinh247vn/posts/index.html?v=164
