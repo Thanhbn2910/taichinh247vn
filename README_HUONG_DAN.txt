@@ -1,33 +1,54 @@
-FINANCE CONSUMER SITE V13 - REAL CRM
+FINANCE CONSUMER SITE V14 - AI CHATBOT THAT + CRM
 
-Bản này nâng từ V12 lên V13 CRM thật.
+BAN MOI CO:
+- Chatbot AI noi tren website
+- Tra loi tu dong ve vay, CIC, the tin dung, bao hiem
+- Form thu lead ngay trong chatbot
+- Day lead vao CRM Google Sheet
+- Luu hoi thoai AI vao sheet Chats
+- Admin xem lead, pipeline, lich goi, xuat CSV, xem hoi thoai AI
 
-TÍNH NĂNG MỚI:
-1. Form lead ngoài website.
-2. Admin CRM tại /admin.html.
-3. Pipeline trạng thái: Mới, Đang gọi, Quan tâm, Chốt, Hủy.
-4. Lịch gọi lại theo ngày giờ.
-5. Dashboard KPI realtime từ dữ liệu lead.
-6. Xuất CSV.
-7. Google Apps Script để lưu dữ liệu vào Google Sheet thật.
-8. Local fallback: chưa kết nối Sheet vẫn test được bằng trình duyệt.
+HUONG DAN CAP NHAT LEN GITHUB PAGES:
+1. Giai nen file finance_consumer_site_v14_real_ai_chatbot.zip
+2. Vao repo GitHub: taichinh247vn
+3. Upload de len cac file/folder moi:
+   assets, data, google-apps-script, posts, admin.html, cam-on.html, index.html, robots.txt, sitemap.xml, vay-tin-chap.html
+4. Commit changes
+5. Cho GitHub Pages tu deploy
+6. Mo: https://thanhbn2910.github.io/taichinh247vn/
+7. Admin: https://thanhbn2910.github.io/taichinh247vn/admin.html
 
-CÁCH UPLOAD NETLIFY:
-- Giải nén file zip.
-- Kéo toàn bộ thư mục vào Netlify Deploys.
+HUONG DAN CAI GOOGLE SHEET + APPS SCRIPT V14:
+1. Mo Google Sheet CRM dang dung hoac tao sheet moi
+2. Extensions > Apps Script
+3. Xoa code cu, copy noi dung file google-apps-script/Code.gs vao
+4. Save
+5. Deploy > New deployment > Web app
+6. Execute as: Me
+7. Who has access: Anyone
+8. Copy Web App URL
+9. Mo file assets/app.js
+10. Tim dong GAS_URL:''
+11. Dan link vao, vi du:
+    GAS_URL:'https://script.google.com/macros/s/AKfycb.../exec'
+12. Luu file, upload lai len GitHub, Commit changes
 
-CÁCH KẾT NỐI GOOGLE SHEET:
-1. Tạo Google Sheet mới.
-2. Đặt sheet đầu tiên tên: Leads.
-3. Vào Extensions > Apps Script.
-4. Dán nội dung google-apps-script/Code.gs.
-5. Deploy > New deployment > Web app.
-6. Execute as: Me.
-7. Who has access: Anyone.
-8. Copy Web App URL.
-9. Mở assets/app.js, tìm GAS_URL:'' và dán URL vào giữa dấu nháy.
-10. Upload lại lên Netlify.
+CAI API KEY AI THAT:
+1. Trong Apps Script, vao Project Settings
+2. Script properties > Add script property
+3. Name: OPENAI_API_KEY
+4. Value: dan API key OpenAI cua ban
+5. Save
+6. Deploy lai Apps Script neu can
 
-LƯU Ý:
-- /admin.html hiện chưa có đăng nhập thật. Không public link admin rộng rãi.
-- V14 sẽ nâng AI chatbot thật hơn, có kịch bản hỏi đáp và chấm điểm lead.
+NEU CHUA CO API KEY:
+- Chatbot van chay bang rule fallback co san
+- CRM van thu lead binh thuong
+
+KIEM TRA:
+1. Mo web
+2. Bam nut "AI tu van"
+3. Hoi: "Luong 8 trieu vay duoc bao nhieu?"
+4. De lai SDT trong form chatbot
+5. Mo admin.html de xem lead
+6. Mo Google Sheet tab Leads va Chats de xem du lieu that
