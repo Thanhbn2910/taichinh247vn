@@ -1,6 +1,4 @@
-// V18.3 — VayNhanh247 Google Sheet + Gmail ACTIVATED
-// Web App URL đã được gắn sẵn.
-
+// V18.5 FULL PACKAGE
 window.VAYNHANH247_CONFIG = {
-  GAS_URL: 'https://script.google.com/macros/s/AKfycbwhJ0eeZx657iNEoXybvpFe53KqbSdmUBc6AoAEBIDrHd4JTpxd5PFfkNhjma_ZYq7UjA/exec'
+  GAS_URL:'https://script.google.com/macros/s/AKfycbwzekJhpMXJVSWA1nBSp-OCA_2FGAtY6j57lj724G4YF7SUiYNmd_WI4fpaVm4M220QuA/exec'
 };
