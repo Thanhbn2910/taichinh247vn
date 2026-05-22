@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hướng dẫn cài Google Sheet + Gmail Lead - VayNhanh247</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="header"><div class="container nav">
+<a class="brand" href="index.html"><span class="logo">V</span><span>VayNhanh247<small>Setup V18.1</small></span></a>
+<nav class="menu"><a href="index.html">Trang chủ</a><a href="admin.html">Admin CRM</a></nav>
+</div></header>
+<section class="section">
+<div class="container">
+<span class="badge">V18.1 Setup</span>
+<h1>Hướng dẫn kích hoạt Google Sheet + Gmail Lead thật</h1>
+<div class="card">
+<h2>Bước 1 — Tạo Google Sheet</h2>
+<p>Tạo Google Sheet mới tên: <b>VayNhanh247_Leads</b></p>
+<h2>Bước 2 — Apps Script</h2>
+<p>Trong Google Sheet chọn: <b>Extensions → Apps Script</b>. Xóa code mặc định, copy toàn bộ file <b>google-apps-script/Code.gs</b> vào.</p>
+<h2>Bước 3 — Deploy Web App</h2>
+<p>Chọn: <b>Deploy → New deployment → Web app</b></p>
+<ul>
+<li>Execute as: <b>Me</b></li>
+<li>Who has access: <b>Anyone</b></li>
+</ul>
+<p>Copy link dạng: <b>https://script.google.com/macros/s/.../exec</b></p>
+<h2>Bước 4 — Dán link vào web</h2>
+<p>Mở file <b>assets/config.js</b> và dán link vào dòng:</p>
+<pre>GAS_URL: 'https://script.google.com/macros/s/.../exec'</pre>
+<h2>Bước 5 — Upload lại GitHub</h2>
+<p>Upload lại file <b>assets/config.js</b> lên repo <b>Vaynhanh247vn</b>, commit và test form.</p>
+<h2>Link test</h2>
+<p><a class="btn" href="index.html?v=181">Trang chủ</a> <a class="btn secondary" href="admin.html?v=181">Admin CRM</a></p>
+</div>
+</div>
+</section>
+<footer class="footer"><div class="container">© VayNhanh247 V18.1</div></footer>
+</body>
+</html>

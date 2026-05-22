@@ -1,6 +1,6 @@
 
 const CRM_CONFIG={
-  GAS_URL:'', // Dán Web App URL Google Apps Script V18 vào đây sau khi deploy
+  GAS_URL:(window.VAYNHANH247_CONFIG&&window.VAYNHANH247_CONFIG.GAS_URL)||'', // V18.1 đọc từ assets/config.js
   fallbackLocal:true,
   leadEmail:'buingocthanh29@gmail.com'
 };
