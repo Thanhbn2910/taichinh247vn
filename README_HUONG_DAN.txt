@@ -1,31 +1,41 @@
-V19.4 — FULL LANDING LEAD REAL COMPLETE
+V19.5 — LEAD VẬN HÀNH THẬT
 
-Đây là bản đầy đủ thật, đã thay trực tiếp giao diện:
-- index.html hero mới: “Hỗ trợ tư vấn vay nhanh – kiểm tra hồ sơ miễn phí – nhận kết quả trong vài phút”
-- CTA kép: Đăng ký tư vấn ngay / Chat Zalo miễn phí
-- Badge: Hỗ trợ 24/7, Miễn phí tư vấn, Bảo mật thông tin
-- Popup tư vấn tự mở
-- Zalo nổi, Gọi ngay, AI tư vấn
-- Sticky CTA mobile
-- Exit popup giữ khách
-- Social proof
-- FAQ SEO + FAQ schema
-- Article schema cho landing
-- Breadcrumb landing
-- Internal link blog
-- Sitemap + robots
-- GA4
-- UTM tracking
-- Form gửi Google Sheet + Gmail + CRM
+Nâng cấp chính:
+1. Auto đổi trạng thái lead trong CRM:
+   - Khi bấm Gọi/Zalo từ lead Mới, tự chuyển sang Đã gọi.
+   - Pipeline: Mới → Đã gọi → Quan tâm → Hồ sơ → Giải ngân → Hủy.
 
-Upload toàn bộ nội dung trong zip lên repo VayNhanh247vn và ghi đè file cũ.
-Quan trọng: phải upload index.html, assets/style.css, assets/app.js, landing/, posts/, sitemap.xml, robots.txt.
+2. Dashboard thật:
+   - Lead hôm nay.
+   - Lead tuần này.
+   - Lead tháng này.
+   - Lead theo nguồn UTM.
+   - Tỷ lệ chuyển đổi.
+   - Hoa hồng dự kiến.
+   - Hoa hồng thực nhận.
+
+3. Lịch gọi lại:
+   - Cảnh báo lead quá hạn.
+   - Cảnh báo lead Mới chưa chăm sóc quá 24h.
+   - Màu lead: Nóng / Ấm / Lạnh.
+
+4. Báo cáo:
+   - Xuất CSV/Excel.
+   - Backup CRM JSON.
+   - Nhật ký chăm sóc lưu local trên máy quản trị.
+
+5. SEO:
+   - Thêm bài SEO cluster tài chính.
+   - Internal link blog → landing → form.
+   - Sitemap cập nhật.
+
+Bắt buộc cập nhật Apps Script:
+- Mở Google Apps Script.
+- Thay toàn bộ Code.gs bằng google-apps-script/Code.gs.
+- Ctrl+S.
+- Deploy phiên bản mới.
 
 Link test sau upload:
-https://thanhbn2910.github.io/VayNhanh247vn/index.html?v=194
-
-Admin:
-https://thanhbn2910.github.io/VayNhanh247vn/admin.html?v=194
-
-Landing:
-https://thanhbn2910.github.io/VayNhanh247vn/landing/vay-tin-chap.html?v=194
+https://thanhbn2910.github.io/VayNhanh247vn/index.html?v=195
+https://thanhbn2910.github.io/VayNhanh247vn/admin.html?v=195
+https://thanhbn2910.github.io/VayNhanh247vn/posts/index.html?v=195
