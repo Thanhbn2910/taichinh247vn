@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin CRM V19.5 - Lead vận hành thật</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f2fbfa;color:#0f172a}a{text-decoration:none;color:inherit}
+.header{height:78px;background:white;border-bottom:1px solid #dbe5e7;display:flex;align-items:center;justify-content:space-between;padding:0 7%;position:sticky;top:0;z-index:50}
+.logo{width:42px;height:42px;border-radius:14px;background:#0f766e;color:white;display:inline-flex;align-items:center;justify-content:center;font-weight:900}
+.brand{display:flex;gap:12px;align-items:center;font-weight:900;font-size:24px}.brand small{display:block;font-size:12px;color:#64748b}
+.nav a,.nav button{margin-left:12px;text-decoration:none;color:#0f172a;font-weight:800;background:#e7f7f5;border:0;border-radius:12px;padding:10px 14px;cursor:pointer}
+.login-page{min-height:calc(100vh - 78px);display:flex;align-items:center;justify-content:center;padding:24px}
+.card{background:white;border:1px solid #dbe5e7;border-radius:24px;padding:22px;box-shadow:0 10px 30px rgba(15,23,42,.06)}
+.login-card{width:100%;max-width:460px}h1{font-size:42px;margin:12px 0}h2{margin-top:0}
+label{font-weight:800;display:block;margin-top:14px}input,select,textarea{box-sizing:border-box;padding:12px;border:1px solid #dbe5e7;border-radius:12px;margin-top:6px}
+.login-card input,.toolbar input{width:100%}button,.btn{background:#0f766e;color:white;border:0;border-radius:12px;padding:12px 16px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.secondary,button.secondary{background:#e7f7f5;color:#0f766e}.btn.orange{background:#ea580c}.btn.dark{background:#0f172a}
+.container{max-width:1280px;margin:auto;padding:38px 24px}.badge{display:inline-block;background:#d7faea;color:#047857;border:1px solid #8df0bd;border-radius:999px;padding:8px 14px;font-weight:900}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin:22px 0}.kpi{background:white;border:1px solid #dbe5e7;border-radius:20px;padding:20px;text-align:center;cursor:pointer}
+.kpi strong{font-size:30px;color:#0f766e;display:block}.kpi span{font-weight:800;color:#64748b}
+.toolbar{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto auto auto;gap:10px;margin:18px 0;align-items:center}
+.table-wrap{overflow:auto;background:white;border-radius:20px;border:1px solid #dbe5e7}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid #e2e8f0;vertical-align:top;text-align:left}th{background:#f8fafc;position:sticky;top:78px;z-index:5}
+td textarea{min-width:190px;min-height:66px}td select,td input{min-width:132px}.notice{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:12px;border-radius:14px;margin:12px 0}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.muted{color:#64748b;font-size:13px}
+.hot{border-left:6px solid #dc2626}.warm{border-left:6px solid #f59e0b}.cold{border-left:6px solid #2563eb}.overdue{background:#fff1f2}.unhandled{background:#fffbeb}
+.status-pill{display:inline-block;padding:5px 10px;border-radius:999px;background:#ecfeff;color:#0f766e;font-weight:900;font-size:12px}.red{color:#dc2626;font-weight:900}.green{color:#047857;font-weight:900}
+@media(max-width:980px){.toolbar{grid-template-columns:1fr}.grid-2,.grid-3{grid-template-columns:1fr}.header{padding:0 16px}h1{font-size:30px}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="assets/config.js"></script>
+<script>
+(function(){
+const CFG=window.VAYNHANH247_CONFIG||{};
+const GAS_URL=CFG.GAS_URL||'https://script.google.com/macros/s/AKfycbwzekJhpMXJVSWA1nBSp-OCA_2FGAtY6j57lj724G4YF7SUiYNmd_WI4fpaVm4M220QuA/exec';
+const ADMIN_USER=CFG.ADMIN_USER||'thanhbn29';
+const ADMIN_PASS=CFG.ADMIN_PASS||'Thanh2509!';
+const ZALO_PHONE=CFG.ZALO_PHONE||'0982821765';
+const PIPE=['Mới','Đã gọi','Quan tâm','Hồ sơ','Giải ngân','Hủy'];
+const TYPES=['Nóng','Ấm','Lạnh'];
+let LEADS=[];let CARE_LOG=[];
+const root=document.getElementById('root');
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const money=n=>(Number(n)||0).toLocaleString('vi-VN')+' đ';
+const fmt=v=>{if(!v)return'';const d=new Date(v);return isNaN(d)?String(v):d.toLocaleString('vi-VN')};
+const todayKey=()=>new Date().toISOString().slice(0,10);
+function weekStart(d=new Date()){let x=new Date(d);let day=x.getDay()||7;x.setDate(x.getDate()-day+1);x.setHours(0,0,0,0);return x}
+function monthStart(d=new Date()){return new Date(d.getFullYear(),d.getMonth(),1)}
+function header(){return `<header class="header"><div class="brand"><span class="logo">V</span><span>VayNhanh247<small>CRM V19.5 Lead vận hành thật</small></span></div><div class="nav"><a href="index.html">Trang khách</a><a href="posts/index.html">Blog</a>${sessionStorage.getItem('v247_login')==='1'?'<button onclick="logout()">Đăng xuất</button>':''}</div></header>`}
+function renderLogin(){sessionStorage.removeItem('v247_login');root.innerHTML=header()+`<section class="login-page"><div class="card login-card"><span class="badge">Admin bảo mật</span><h1>Đăng nhập CRM</h1><p>CRM chỉ đọc lead thật từ Google Sheet. Không tự sinh lead.</p><label>Tài khoản</label><input id="u" placeholder="Tài khoản"><label>Mật khẩu</label><input id="p" type="password" placeholder="Mật khẩu"><div style="margin-top:16px"><button onclick="login()">Đăng nhập</button></div><p class="muted">Tài khoản: thanhbn29</p></div></section>`}
+window.login=function(){const u=document.getElementById('u').value.trim();const p=document.getElementById('p').value;if(u===ADMIN_USER&&p===ADMIN_PASS){sessionStorage.setItem('v247_login','1');loadCRM();}else alert('Sai tài khoản hoặc mật khẩu.');}
+window.logout=function(){renderLogin();}
+async function api(action,payload={}){const r=await fetch(GAS_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action,...payload})});return await r.json();}
+async function loadCRM(){root.innerHTML=header()+`<main class="container"><h1>Đang tải CRM...</h1><p>Đang đọc lead thật từ Google Sheet.</p></main>`;try{const res=await api('list');if(!res.ok)throw new Error(res.error||'Apps Script trả lỗi');LEADS=res.data||[];CARE_LOG=JSON.parse(localStorage.getItem('v195_care_log')||'[]');renderCRM();}catch(e){root.innerHTML=header()+`<main class="container"><div class="notice"><b>Không tải được CRM:</b> ${esc(e.message)}<br>Hãy cập nhật google-apps-script/Code.gs và deploy phiên bản mới.</div><button onclick="loadCRM()">Thử lại</button></main>`}}
+function calc(){const now=new Date(), ws=weekStart(now), ms=monthStart(now), td=todayKey();let today=0,week=0,month=0,won=0,expected=0,real=0,overdue=0,unhandled=0;const src={};LEADS.forEach(l=>{const d=new Date(l.createdAt);if(!isNaN(d)){if(d.toISOString().slice(0,10)===td)today++;if(d>=ws)week++;if(d>=ms)month++;}if(l.status==='Giải ngân'){won++;real+=Number(l.realRevenue||l.expectedCommission)||0}if(l.status!=='Hủy')expected+=Number(l.expectedCommission)||0;const s=l.utm_source||l.sourcePage||'Không rõ';src[s]=(src[s]||0)+1;if(isOverdue(l))overdue++;if(isUnhandled(l))unhandled++;});return {today,week,month,won,expected,real,overdue,unhandled,src,conv:LEADS.length?Math.round(won/LEADS.length*100):0}}
+function isOverdue(l){if(!l.callbackAt)return false;return new Date(l.callbackAt)<new Date()&&!['Giải ngân','Hủy'].includes(l.status||'Mới')}
+function isUnhandled(l){const d=new Date(l.createdAt);return (l.status||'Mới')==='Mới' && !isNaN(d) && (Date.now()-d.getTime()>24*3600*1000)}
+function rowClass(l){let c=(l.leadType==='Nóng'?'hot':l.leadType==='Lạnh'?'cold':'warm'); if(isOverdue(l))c+=' overdue'; else if(isUnhandled(l))c+=' unhandled'; return c}
+function renderCRM(){const c=calc();root.innerHTML=header()+`<main class="container"><span class="badge">V19.5 Lead Operations Real</span><h1>Vận hành lead thật</h1><p>Auto pipeline, dashboard ngày/tuần/tháng, UTM, tỷ lệ chuyển đổi, hoa hồng thực nhận, cảnh báo quá hạn và nhật ký chăm sóc.</p><div class="kpis"><div class="kpi" onclick="setTimeFilter('today')"><strong>${c.today}</strong><span>Lead hôm nay</span></div><div class="kpi" onclick="setTimeFilter('week')"><strong>${c.week}</strong><span>Lead tuần này</span></div><div class="kpi" onclick="setTimeFilter('month')"><strong>${c.month}</strong><span>Lead tháng này</span></div><div class="kpi"><strong>${c.conv}%</strong><span>Tỷ lệ chốt</span></div><div class="kpi"><strong>${money(c.expected)}</strong><span>Hoa hồng dự kiến</span></div><div class="kpi"><strong>${money(c.real)}</strong><span>Hoa hồng thực nhận</span></div><div class="kpi" onclick="setRiskFilter('overdue')"><strong class="red">${c.overdue}</strong><span>Quá hạn gọi lại</span></div><div class="kpi" onclick="setRiskFilter('unhandled')"><strong>${c.unhandled}</strong><span>Chưa chăm sóc</span></div></div><div class="kpis">${PIPE.map(st=>`<button class="kpi" onclick="filterStatus('${st}')"><strong>${LEADS.filter(l=>(l.status||'Mới')===st).length}</strong><span>${st}</span></button>`).join('')}</div><div class="grid-2"><div class="card"><h2>Lead theo nguồn UTM</h2>${Object.entries(c.src).map(([k,v])=>`<p><b>${esc(k)}:</b> ${v}</p>`).join('')||'<p>Chưa có nguồn.</p>'}</div><div class="card"><h2>Lịch gọi lại gần nhất</h2><div id="callbackBox"></div></div></div><div class="toolbar card"><input id="q" placeholder="Tìm tên, SĐT, nhu cầu..." oninput="renderRows()"><select id="st" onchange="renderRows()"><option value="">Tất cả trạng thái</option>${PIPE.map(x=>`<option>${x}</option>`).join('')}</select><select id="tp" onchange="renderRows()"><option value="">Tất cả phân loại</option>${TYPES.map(x=>`<option>${x}</option>`).join('')}</select><select id="time" onchange="renderRows()"><option value="">Tất cả thời gian</option><option value="today">Hôm nay</option><option value="week">Tuần này</option><option value="month">Tháng này</option></select><button class="secondary" onclick="exportCSV()">Xuất CSV/Excel</button><button class="secondary" onclick="backupCRM()">Backup JSON</button><button onclick="loadCRM()">Tải lại</button></div><div class="table-wrap"><table><thead><tr><th>Khách</th><th>Sản phẩm/Nhu cầu</th><th>Pipeline</th><th>Phân loại</th><th>Lịch hẹn</th><th>Ghi chú/Nhật ký</th><th>Hoa hồng</th><th>Thao tác</th></tr></thead><tbody id="rows"></tbody></table></div><section class="card" style="margin-top:20px"><h2>Nhật ký chăm sóc gần đây</h2><div id="careLogBox"></div></section></main>`;renderRows();renderCallbacks();renderCareLog();}
+window.filterStatus=st=>{document.getElementById('st').value=st;renderRows()}
+window.setTimeFilter=t=>{document.getElementById('time').value=t;renderRows()}
+window.setRiskFilter=r=>{window.RISK_FILTER=r;renderRows()}
+function filtered(){const q=(document.getElementById('q')?.value||'').toLowerCase(),st=document.getElementById('st')?.value||'',tp=document.getElementById('tp')?.value||'',time=document.getElementById('time')?.value||'';const now=new Date(),ws=weekStart(now),ms=monthStart(now),td=todayKey();return LEADS.filter(l=>{const blob=[l.name,l.phone,l.email,l.service,l.need,l.careNote,l.utm_source].join(' ').toLowerCase();const d=new Date(l.createdAt);let timeOK=true;if(time==='today')timeOK=!isNaN(d)&&d.toISOString().slice(0,10)===td;if(time==='week')timeOK=!isNaN(d)&&d>=ws;if(time==='month')timeOK=!isNaN(d)&&d>=ms;let riskOK=true;if(window.RISK_FILTER==='overdue')riskOK=isOverdue(l);if(window.RISK_FILTER==='unhandled')riskOK=isUnhandled(l);return(!q||blob.includes(q))&&(!st||(l.status||'Mới')===st)&&(!tp||(l.leadType||'Ấm')===tp)&&timeOK&&riskOK})}
+window.renderRows=function(){const rows=filtered();document.getElementById('rows').innerHTML=rows.map(l=>`<tr class="${rowClass(l)}"><td><b>${esc(l.name)}</b><br>${esc(l.phone)}<br><small>${fmt(l.createdAt)}</small><br>${isOverdue(l)?'<span class="red">Quá hạn gọi lại</span>':''}${isUnhandled(l)?'<span class="red">Chưa chăm sóc >24h</span>':''}</td><td><b>${esc(l.service)}</b><br>${esc(l.need||l.note)}<br><small>Nguồn: ${esc(l.utm_source||l.sourcePage||'Không rõ')}</small></td><td><select onchange="saveLead('${esc(l.id)}','status',this.value,true)">${PIPE.map(st=>`<option ${st===(l.status||'Mới')?'selected':''}>${st}</option>`).join('')}</select></td><td><select onchange="saveLead('${esc(l.id)}','leadType',this.value,true)">${TYPES.map(t=>`<option ${t===(l.leadType||'Ấm')?'selected':''}>${t}</option>`).join('')}</select></td><td><input type="datetime-local" value="${toLocal(l.callbackAt)}" onchange="saveLead('${esc(l.id)}','callbackAt',this.value,true)"></td><td><textarea onchange="saveLead('${esc(l.id)}','careNote',this.value,true)" placeholder="Nhập ghi chú chăm sóc...">${esc(l.careNote||'')}</textarea></td><td><input type="number" value="${Number(l.realRevenue||0)}" placeholder="Thực nhận" onchange="saveLead('${esc(l.id)}','realRevenue',this.value,true)"><small>Dự kiến: ${money(l.expectedCommission)}</small></td><td><a class="btn" href="tel:${esc(l.phone)}" onclick="autoCalled('${esc(l.id)}')">Gọi</a><br><br><a class="btn secondary" target="_blank" href="https://zalo.me/${esc((l.phone||ZALO_PHONE).replace(/[^0-9]/g,''))}" onclick="autoCalled('${esc(l.id)}')">Zalo</a></td></tr>`).join('')||'<tr><td colspan="8">Chưa có lead phù hợp.</td></tr>';}
+function toLocal(v){if(!v)return'';const d=new Date(v);if(isNaN(d))return'';return new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,16)}
+async function saveLead(id,field,value,log){const l=LEADS.find(x=>x.id===id);if(l)l[field]=value;if(log)addCareLog(l,field,value);await api('update',{id,patch:{[field]:value}});renderCallbacks();renderCareLog();}
+window.saveLead=saveLead;
+window.autoCalled=function(id){const l=LEADS.find(x=>x.id===id);if(l&&(l.status||'Mới')==='Mới')saveLead(id,'status','Đã gọi',true)}
+function addCareLog(l,field,value){if(!l)return;CARE_LOG.unshift({time:new Date().toISOString(),id:l.id,name:l.name,phone:l.phone,field,value});CARE_LOG=CARE_LOG.slice(0,200);localStorage.setItem('v195_care_log',JSON.stringify(CARE_LOG))}
+function renderCallbacks(){const list=LEADS.filter(l=>l.callbackAt).sort((a,b)=>new Date(a.callbackAt)-new Date(b.callbackAt)).slice(0,10);const el=document.getElementById('callbackBox');if(el)el.innerHTML=list.map(l=>`<p>${isOverdue(l)?'🔴':'🟢'} <b>${esc(l.name)}</b> — ${fmt(l.callbackAt)}<br><span class="muted">${esc(l.phone)} | ${esc(l.status)}</span></p>`).join('')||'<p>Chưa có lịch hẹn.</p>'}
+function renderCareLog(){const el=document.getElementById('careLogBox');if(el)el.innerHTML=CARE_LOG.slice(0,20).map(x=>`<p><b>${fmt(x.time)}</b> — ${esc(x.name)} (${esc(x.phone)}): ${esc(x.field)} → ${esc(x.value)}</p>`).join('')||'<p>Chưa có nhật ký chăm sóc.</p>'}
+window.exportCSV=function(){const h=['Mã lead','Thời gian','Họ tên','SĐT','Email','Sản phẩm','Nhu cầu','Nguồn','Trạng thái','Phân loại','Lịch hẹn','Ghi chú','Hoa hồng dự kiến','Hoa hồng thực nhận'];const data=filtered().map(l=>[l.id,fmt(l.createdAt),l.name,l.phone,l.email,l.service,l.need,l.utm_source||l.sourcePage,l.status,l.leadType,l.callbackAt,l.careNote,l.expectedCommission,l.realRevenue||0]);download('VayNhanh247_Leads_V19_5.csv',[h,...data].map(r=>r.map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(',')).join('\n'),'text/csv')}
+window.backupCRM=function(){download('VayNhanh247_CRM_Backup_V19_5.json',JSON.stringify({leads:LEADS,careLog:CARE_LOG,exportedAt:new Date().toISOString()},null,2),'application/json')}
+function download(name,content,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(["\ufeff"+content],{type:type+';charset=utf-8'}));a.download=name;a.click()}
+renderLogin();
+})();
+</script>
+<script src="assets/config.js"></script><script src="assets/app.js"></script><script src="assets/tracking-v20-2.js"></script></body></html>

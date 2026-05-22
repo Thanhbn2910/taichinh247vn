@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thanhbn2910.github.io/VayNhanh247vn/sitemap.xml
