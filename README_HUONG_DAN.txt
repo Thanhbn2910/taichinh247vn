@@ -1,13 +1,28 @@
-V17 — VAYNHANH247 REBRAND FULL GITHUB FIXED
+V17.1 — VAYNHANH247 REPO FIXED
 
-Đã đổi thương hiệu:
-- Thương hiệu mới: VayNhanh247
-- Repo GitHub nên dùng: Vaynhanh247
-- GitHub Pages mới:
-  https://thanhbn2910.github.io/Vaynhanh247/
+Mục tiêu bản này:
+- Giữ thương hiệu hiển thị: VayNhanh247
+- Sửa chuẩn repo GitHub Pages thật: Vaynhanh247vn
+- Không còn lệch link giữa Vaynhanh247 và Vaynhanh247vn
+
+Repo GitHub đúng:
+https://github.com/Thanhbn2910/Vaynhanh247vn
+
+Link check đúng:
+Trang chủ:
+https://thanhbn2910.github.io/Vaynhanh247vn/?v=171
+
+Blog:
+https://thanhbn2910.github.io/Vaynhanh247vn/posts/index.html?v=171
+
+Admin:
+https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=171
+
+Sitemap:
+https://thanhbn2910.github.io/Vaynhanh247vn/sitemap.xml
 
 Giữ nguyên:
-- Cấu trúc website
+- Giao diện VayNhanh247
 - Blog SEO50
 - Thư mục /posts
 - 50 bài SEO
@@ -22,22 +37,8 @@ Giữ nguyên:
 - Path tương đối cho GitHub Pages
 
 Cách upload:
-1. Tạo hoặc đổi tên repo GitHub thành: Vaynhanh247
-2. Giải nén file ZIP này.
-3. Upload TOÀN BỘ file/folder bên trong lên repo Vaynhanh247.
-4. Commit changes.
-5. Vào Settings -> Pages -> Deploy from branch -> main / root.
-6. Chờ 1-2 phút.
-
-Link check:
-Trang chủ:
-https://thanhbn2910.github.io/Vaynhanh247/?v=17
-
-Blog:
-https://thanhbn2910.github.io/Vaynhanh247/posts/index.html?v=17
-
-Admin:
-https://thanhbn2910.github.io/Vaynhanh247/admin.html?v=17
-
-Sitemap:
-https://thanhbn2910.github.io/Vaynhanh247/sitemap.xml
+1. Giải nén ZIP.
+2. Upload TOÀN BỘ file/folder bên trong lên repo Vaynhanh247vn.
+3. Commit changes.
+4. Chờ GitHub Pages build 1-2 phút.
+5. Mở link check ở trên.
