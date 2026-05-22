@@ -3,14 +3,159 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Admin CRM V19.2 - VayNhanh247</title>
-<link rel="stylesheet" href="assets/style.css">
+<title>Admin CRM V19.3 - VayNhanh247</title>
 <style>
-body{background:#f2fbfa;color:#0f172a}.admin-login-page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}.login-card{background:white;border-radius:28px;padding:32px;max-width:460px;width:100%;box-shadow:0 20px 60px rgba(15,23,42,.12)}.login-card h1{font-size:34px}.login-card label{font-weight:800;display:block;margin-top:14px}.login-card input{width:100%;padding:14px;border:1px solid #dbe5e7;border-radius:14px;margin-top:6px}.login-card button,.toolbar button,.admin-header button,.btn{background:#0f766e;color:white;border:0;border-radius:14px;padding:12px 16px;font-weight:800;text-decoration:none;display:inline-block;margin-top:10px}.btn.secondary{background:#e7f7f5;color:#0f766e}.hint{color:#64748b;font-size:13px}.brand-row{display:flex;gap:12px;align-items:center}.logo{width:42px;height:42px;border-radius:14px;background:#0f766e;color:white;display:inline-flex;align-items:center;justify-content:center;font-weight:900}.brand-row small{display:block;color:#64748b}.admin-header{height:82px;background:white;border-bottom:1px solid #dbe5e7;display:flex;align-items:center;justify-content:space-between;padding:0 8%;position:sticky;top:0;z-index:5}.admin-header nav{display:flex;gap:14px;align-items:center}.admin-header a{font-weight:800;color:#0f172a;text-decoration:none}.admin-shell{max-width:1180px;margin:0 auto;padding:52px 24px}.admin-shell h1{font-size:44px}.badge{background:#d7faea;color:#047857;border:1px solid #8df0bd;border-radius:999px;padding:8px 14px;font-weight:900}.lead{font-size:18px;color:#475569}.kpi-row,.pipeline-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:22px 0}.kpi,.pipeline-row button,.card{background:white;border:1px solid #dbe5e7;border-radius:22px;padding:20px;box-shadow:0 10px 30px rgba(15,23,42,.04)}.kpi strong,.pipeline-row b{display:block;font-size:28px;color:#0f766e}.kpi span,.pipeline-row span{font-weight:800;color:#64748b}.toolbar{display:flex;gap:12px;flex-wrap:wrap;background:white;border-radius:22px;padding:16px;margin:24px 0}.toolbar input{flex:1;min-width:260px}.toolbar input,.toolbar select,table select,table input,textarea{padding:10px;border:1px solid #dbe5e7;border-radius:12px}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid #e2e8f0;vertical-align:top}th{text-align:left;background:#f8fafc}textarea{min-width:180px;min-height:64px}.secondary{background:#e7f7f5!important;color:#0f766e!important}@media(max-width:800px){.grid-2{grid-template-columns:1fr}.admin-header{padding:0 16px}.admin-shell h1{font-size:32px}}
+body{margin:0;font-family:Arial,sans-serif;background:#f2fbfa;color:#0f172a}
+.header{height:78px;background:white;border-bottom:1px solid #dbe5e7;display:flex;align-items:center;justify-content:space-between;padding:0 7%}
+.logo{width:42px;height:42px;border-radius:14px;background:#0f766e;color:white;display:inline-flex;align-items:center;justify-content:center;font-weight:900}
+.brand{display:flex;gap:12px;align-items:center;font-weight:900;font-size:24px}
+.brand small{display:block;font-size:12px;color:#64748b}
+.nav a,.nav button{margin-left:12px;text-decoration:none;color:#0f172a;font-weight:800;background:#e7f7f5;border:0;border-radius:12px;padding:10px 14px}
+.login-page{min-height:calc(100vh - 78px);display:flex;align-items:center;justify-content:center;padding:24px}
+.card{background:white;border:1px solid #dbe5e7;border-radius:24px;padding:26px;box-shadow:0 10px 30px rgba(15,23,42,.06)}
+.login-card{width:100%;max-width:460px}
+h1{font-size:42px;margin:12px 0} h2{margin-top:0}
+label{font-weight:800;display:block;margin-top:14px}
+input,select,textarea{width:100%;box-sizing:border-box;padding:12px;border:1px solid #dbe5e7;border-radius:12px;margin-top:6px}
+button,.btn{background:#0f766e;color:white;border:0;border-radius:12px;padding:12px 16px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.secondary,button.secondary{background:#e7f7f5;color:#0f766e}
+.container{max-width:1180px;margin:auto;padding:42px 24px}
+.badge{display:inline-block;background:#d7faea;color:#047857;border:1px solid #8df0bd;border-radius:999px;padding:8px 14px;font-weight:900}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:22px 0}
+.kpi{background:white;border:1px solid #dbe5e7;border-radius:20px;padding:20px;text-align:center}
+.kpi strong{font-size:30px;color:#0f766e;display:block}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.toolbar input{flex:1;min-width:240px}
+.toolbar select{width:auto;min-width:160px}
+.table-wrap{overflow:auto;background:white;border-radius:20px;border:1px solid #dbe5e7}
+table{width:100%;border-collapse:collapse} th,td{padding:12px;border-bottom:1px solid #e2e8f0;vertical-align:top;text-align:left} th{background:#f8fafc}
+td textarea{min-width:180px;min-height:62px}td select,td input{min-width:130px}
+.notice{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:12px;border-radius:14px;margin:12px 0}
+@media(max-width:760px){.header{padding:0 16px}h1{font-size:30px}.toolbar{display:block}.toolbar>*{margin:6px 0;width:100%}}
 </style>
 </head>
 <body>
+<div id="root"></div>
+
 <script src="assets/config.js"></script>
-<script src="assets/admin-crm.js"></script>
+<script>
+(function(){
+const CFG=window.VAYNHANH247_CONFIG||{};
+const GAS_URL=CFG.GAS_URL||'https://script.google.com/macros/s/AKfycbwzekJhpMXJVSWA1nBSp-OCA_2FGAtY6j57lj724G4YF7SUiYNmd_WI4fpaVm4M220QuA/exec';
+const ADMIN_USER=CFG.ADMIN_USER||'thanhbn29';
+const ADMIN_PASS=CFG.ADMIN_PASS||'Thanh2509!';
+const ZALO_PHONE=CFG.ZALO_PHONE||'0982821765';
+const PIPE=['Mới','Đã gọi','Quan tâm','Hồ sơ','Giải ngân','Hủy'];
+const TYPES=['Nóng','Ấm','Lạnh'];
+let LEADS=[];
+
+const root=document.getElementById('root');
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const money=n=>(Number(n)||0).toLocaleString('vi-VN')+' đ';
+const fmt=v=>{if(!v)return'';const d=new Date(v);return isNaN(d)?String(v):d.toLocaleString('vi-VN')};
+
+function header(){
+ return `<header class="header"><div class="brand"><span class="logo">V</span><span>VayNhanh247<small>Admin CRM V19.3</small></span></div><div class="nav"><a href="index.html">Trang khách</a><a href="posts/index.html">Blog</a>${sessionStorage.getItem('v247_login')==='1'?'<button onclick="logout()">Đăng xuất</button>':''}</div></header>`;
+}
+
+function renderLogin(){
+ sessionStorage.removeItem('v247_login');
+ root.innerHTML=header()+`<section class="login-page"><div class="card login-card">
+ <span class="badge">Admin bảo mật</span>
+ <h1>Đăng nhập CRM</h1>
+ <p>CRM chỉ đọc lead thật từ Google Sheet. Không tự sinh lead.</p>
+ <label>Tài khoản</label><input id="u" placeholder="Tài khoản">
+ <label>Mật khẩu</label><input id="p" type="password" placeholder="Mật khẩu">
+ <div style="margin-top:16px"><button onclick="login()">Đăng nhập</button></div>
+ <p style="color:#64748b;font-size:13px">Tài khoản: thanhbn29</p>
+ </div></section>`;
+}
+
+window.login=function(){
+ const u=document.getElementById('u').value.trim();
+ const p=document.getElementById('p').value;
+ if(u===ADMIN_USER && p===ADMIN_PASS){sessionStorage.setItem('v247_login','1');loadCRM();}
+ else alert('Sai tài khoản hoặc mật khẩu.');
+};
+window.logout=function(){renderLogin();};
+
+async function api(action,payload={}){
+ const r=await fetch(GAS_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action,...payload})});
+ return await r.json();
+}
+
+async function loadCRM(){
+ root.innerHTML=header()+`<main class="container"><h1>Đang tải CRM...</h1><p>Đang đọc lead thật từ Google Sheet.</p></main>`;
+ try{
+   const res=await api('list');
+   if(!res.ok) throw new Error(res.error||'Apps Script trả lỗi');
+   LEADS=res.data||[];
+   renderCRM();
+ }catch(e){
+   root.innerHTML=header()+`<main class="container"><div class="notice"><b>Không tải được CRM:</b> ${esc(e.message)}<br>Kiểm tra Code.gs đã deploy phiên bản mới chưa.</div><button onclick="loadCRM()">Thử lại</button></main>`;
+ }
+}
+
+function renderCRM(){
+ const today=new Date().toISOString().slice(0,10);
+ const todayCount=LEADS.filter(l=>{const d=new Date(l.createdAt);return !isNaN(d)&&d.toISOString().slice(0,10)===today}).length;
+ const won=LEADS.filter(l=>l.status==='Giải ngân').length;
+ const conv=LEADS.length?Math.round(won/LEADS.length*100):0;
+ const exp=LEADS.filter(l=>l.status!=='Hủy').reduce((s,l)=>s+(Number(l.expectedCommission)||0),0);
+ root.innerHTML=header()+`<main class="container">
+ <span class="badge">CRM thật V19.3</span>
+ <h1>Quản lý lead thật</h1>
+ <p>Lead chỉ xuất hiện khi khách gửi form đăng ký → Google Sheet/Gmail → CRM.</p>
+ <div class="kpis">
+   <div class="kpi"><strong>${LEADS.length}</strong><span>Tổng lead</span></div>
+   <div class="kpi"><strong>${todayCount}</strong><span>Lead hôm nay</span></div>
+   <div class="kpi"><strong>${conv}%</strong><span>Tỷ lệ chốt</span></div>
+   <div class="kpi"><strong>${money(exp)}</strong><span>Hoa hồng dự kiến</span></div>
+ </div>
+ <div class="kpis">${PIPE.map(st=>`<button class="kpi" onclick="filterStatus('${st}')"><strong>${LEADS.filter(l=>(l.status||'Mới')===st).length}</strong><span>${st}</span></button>`).join('')}</div>
+ <div class="toolbar card">
+   <input id="q" placeholder="Tìm tên, SĐT, nhu cầu..." oninput="renderRows()">
+   <select id="st" onchange="renderRows()"><option value="">Tất cả trạng thái</option>${PIPE.map(x=>`<option>${x}</option>`).join('')}</select>
+   <select id="tp" onchange="renderRows()"><option value="">Tất cả phân loại</option>${TYPES.map(x=>`<option>${x}</option>`).join('')}</select>
+   <button class="secondary" onclick="exportCSV()">Xuất CSV/Excel</button>
+   <button onclick="loadCRM()">Tải lại</button>
+ </div>
+ <div class="table-wrap"><table><thead><tr><th>Khách</th><th>Sản phẩm/Nhu cầu</th><th>Pipeline</th><th>Phân loại</th><th>Lịch hẹn</th><th>Ghi chú</th><th>Thao tác</th></tr></thead><tbody id="rows"></tbody></table></div>
+ </main>`;
+ renderRows();
+}
+
+window.filterStatus=function(st){document.getElementById('st').value=st;renderRows();};
+
+function filtered(){
+ const q=(document.getElementById('q')?.value||'').toLowerCase();
+ const st=document.getElementById('st')?.value||'';
+ const tp=document.getElementById('tp')?.value||'';
+ return LEADS.filter(l=>{
+   const blob=[l.name,l.phone,l.email,l.service,l.need,l.careNote].join(' ').toLowerCase();
+   return (!q||blob.includes(q))&&(!st||(l.status||'Mới')===st)&&(!tp||(l.leadType||'Ấm')===tp);
+ });
+}
+
+window.renderRows=function(){
+ const rows=filtered();
+ document.getElementById('rows').innerHTML=rows.map(l=>`<tr>
+ <td><b>${esc(l.name)}</b><br>${esc(l.phone)}<br><small>${fmt(l.createdAt)}</small></td>
+ <td><b>${esc(l.service)}</b><br>${esc(l.need||l.note)}<br><small>HH: ${money(l.expectedCommission)}</small></td>
+ <td><select onchange="saveLead('${esc(l.id)}','status',this.value)">${PIPE.map(st=>`<option ${st===(l.status||'Mới')?'selected':''}>${st}</option>`).join('')}</select></td>
+ <td><select onchange="saveLead('${esc(l.id)}','leadType',this.value)">${TYPES.map(t=>`<option ${t===(l.leadType||'Ấm')?'selected':''}>${t}</option>`).join('')}</select></td>
+ <td><input type="datetime-local" value="${toLocal(l.callbackAt)}" onchange="saveLead('${esc(l.id)}','callbackAt',this.value)"></td>
+ <td><textarea onchange="saveLead('${esc(l.id)}','careNote',this.value)">${esc(l.careNote||'')}</textarea></td>
+ <td><a class="btn" href="tel:${esc(l.phone)}">Gọi</a> <a class="btn secondary" target="_blank" href="https://zalo.me/${esc((l.phone||ZALO_PHONE).replace(/[^0-9]/g,''))}">Zalo</a></td>
+ </tr>`).join('')||'<tr><td colspan="7">Chưa có lead thật. Khách gửi form xong mới hiện tại đây.</td></tr>';
+};
+
+function toLocal(v){if(!v)return'';const d=new Date(v);if(isNaN(d))return'';return new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,16)}
+window.saveLead=async function(id,field,value){const l=LEADS.find(x=>x.id===id);if(l)l[field]=value;await api('update',{id,patch:{[field]:value}});};
+window.exportCSV=function(){const h=['Mã lead','Thời gian','Họ tên','SĐT','Email','Sản phẩm','Nhu cầu','Trạng thái','Phân loại','Lịch hẹn','Ghi chú'];const data=filtered().map(l=>[l.id,fmt(l.createdAt),l.name,l.phone,l.email,l.service,l.need,l.status,l.leadType,l.callbackAt,l.careNote]);const csv=[h,...data].map(r=>r.map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(',')).join('\\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(["\\ufeff"+csv],{type:'text/csv;charset=utf-8'}));a.download='VayNhanh247_Leads.csv';a.click();};
+
+renderLogin();
+})();
+</script>
 </body>
 </html>
