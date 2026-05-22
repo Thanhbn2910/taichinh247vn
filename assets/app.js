@@ -1,3 +1,24 @@
+
+/* V19 Anti Spam */
+function v19CanSubmitLead(){
+  const cfg = window.VAYNHANH247_SECURITY || {MIN_INTERVAL_MS:60000, MAX_SUBMIT_PER_HOUR:5};
+  const now = Date.now();
+  const last = Number(localStorage.getItem('v19_last_submit') || 0);
+  const hist = JSON.parse(localStorage.getItem('v19_submit_hist') || '[]').filter(t => now - t < 3600000);
+  if(now - last < cfg.MIN_INTERVAL_MS){
+    alert('Bạn vừa gửi thông tin. Vui lòng chờ khoảng 1 phút trước khi gửi lại.');
+    return false;
+  }
+  if(hist.length >= cfg.MAX_SUBMIT_PER_HOUR){
+    alert('Bạn đã gửi quá số lần cho phép trong 1 giờ. Vui lòng thử lại sau.');
+    return false;
+  }
+  hist.push(now);
+  localStorage.setItem('v19_last_submit', String(now));
+  localStorage.setItem('v19_submit_hist', JSON.stringify(hist));
+  return true;
+}
+
 /* V18.7 Lead Mapping Fixed */
 
 const CRM_CONFIG={
@@ -79,7 +100,7 @@ function normalizeLeadData(form){
   };
 }
 
-async function submitLead(form){
+async function submitLead(form){ if(typeof v19CanSubmitLead==='function' && !v19CanSubmitLead()) return; 
   const lead=normalizeLeadData(form);
   if(!lead.name || !lead.phone){alert('Vui lòng nhập họ tên và số điện thoại.');return}
   const btn=form.querySelector('button[type="submit"]'),old=btn?btn.textContent:'';

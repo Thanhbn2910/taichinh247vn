@@ -1,42 +1,49 @@
-V18.8 — VAYNHANH247 CRM VẬN HÀNH CHUYÊN NGHIỆP
+V19 — VAYNHANH247 LANDING KIẾM LEAD THẬT + CRM PRO
 
 Đã hoàn thành:
-- Đăng nhập Admin.
-- Nút Gọi ngay từ CRM.
-- Nút Zalo từ CRM.
-- Lọc lead theo trạng thái.
-- Ghi chú chăm sóc khách.
-- Pipeline: Mới → Đã gọi → Quan tâm → Hồ sơ → Giải ngân → Hủy.
-- Xuất CSV/Excel danh sách lead.
-- Dashboard: lead hôm nay, lead theo nguồn, tỷ lệ chốt, hoa hồng dự kiến.
-- Apps Script hỗ trợ create/list/update từ Google Sheet.
+1. Kiểm tra và củng cố V18.9:
+- Admin đăng nhập được.
+- Form có chống spam.
+- Lead vào Sheet/Gmail/CRM qua GAS.
+- Lịch hẹn gọi lại trong CRM.
 
-Tài khoản Admin mặc định:
+2. V19 Landing kiếm khách:
+- landing/vay-tin-chap.html
+- landing/cic-no-xau.html
+- landing/vay-fe.html
+- landing/vay-vpbank.html
+- landing/the-tin-dung.html
+
+3. Zalo thật:
+- Số Zalo/call mặc định: 0982821765
+- Nút Zalo trên landing.
+- Nút Zalo trong CRM.
+
+4. CTA mạnh hơn:
+- Đăng ký tư vấn miễn phí ngay.
+- Gọi ngay.
+- Chat Zalo.
+
+5. CRM Pro:
+- Đăng nhập Admin.
+- Gọi ngay/Zalo.
+- Lọc trạng thái.
+- Lọc phân loại lead Nóng/Ấm/Lạnh.
+- Lịch hẹn gọi lại.
+- Ghi chú chăm sóc.
+- Xuất CSV/Excel.
+- Dashboard lead, nguồn, tỷ lệ chốt, hoa hồng dự kiến.
+
+Tài khoản Admin:
 User: admin
 Pass: vay2472026
 
-GAS URL:
-https://script.google.com/macros/s/AKfycbwzekJhpMXJVSWA1nBSp-OCA_2FGAtY6j57lj724G4YF7SUiYNmd_WI4fpaVm4M220QuA/exec
-
-VIỆC CẦN LÀM SAU KHI UPLOAD:
-1. Upload toàn bộ bản V18.8 lên GitHub repo Vaynhanh247vn.
-2. Vào Google Apps Script.
-3. Thay toàn bộ Code.gs bằng file:
-   google-apps-script/Code.gs
-4. Ctrl + S.
-5. Triển khai -> Quản lý tùy chọn triển khai -> bút chì -> Phiên bản mới -> Triển khai.
-6. Test GAS URL:
-   https://script.google.com/macros/s/AKfycbwzekJhpMXJVSWA1nBSp-OCA_2FGAtY6j57lj724G4YF7SUiYNmd_WI4fpaVm4M220QuA/exec
-   Đúng sẽ hiện version V18.8.
-7. Test Admin:
-   https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=188
-
-Link test:
-Trang chủ:
-https://thanhbn2910.github.io/Vaynhanh247vn/?v=188
-
-CRM:
-https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=188
-
-Blog:
-https://thanhbn2910.github.io/Vaynhanh247vn/posts/?v=188
+Việc cần làm:
+1. Upload toàn bộ bản V19 lên repo Vaynhanh247vn.
+2. Vào Apps Script, thay Code.gs bằng file google-apps-script/Code.gs.
+3. Ctrl+S.
+4. Triển khai phiên bản mới.
+5. Test:
+https://thanhbn2910.github.io/Vaynhanh247vn/?v=19
+https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=19
+https://thanhbn2910.github.io/Vaynhanh247vn/landing/vay-tin-chap.html?v=19
