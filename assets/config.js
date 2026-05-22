@@ -1,8 +1,7 @@
-// V18.1 CONFIG — Dán Google Apps Script Web App URL vào đây
+// V18.2 — VayNhanh247 Google Sheet + Gmail CONFIG
+// Sau khi Deploy Google Apps Script, dán link Web App URL vào GAS_URL.
 // Ví dụ:
-// window.VAYNHANH247_CONFIG = {
-//   GAS_URL: 'https://script.google.com/macros/s/AKfycb.../exec'
-// };
+// GAS_URL: 'https://script.google.com/macros/s/AKfycbxxxx/exec'
 
 window.VAYNHANH247_CONFIG = {
   GAS_URL: ''
