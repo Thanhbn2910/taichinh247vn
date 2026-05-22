@@ -1,5 +1,5 @@
 function doGet(e){
-  return ContentService.createTextOutput(JSON.stringify({ok:true,app:"VayNhanh247",version:"V19.3",status:"running"})).setMimeType(ContentService.MimeType.JSON);
+  return ContentService.createTextOutput(JSON.stringify({ok:true,app:"VayNhanh247",version:"V19.4",status:"running"})).setMimeType(ContentService.MimeType.JSON);
 }
 const SHEET_NAME='Leads';
 const HEADERS=['Mã lead','Thời gian','Họ tên','SĐT','Email','Sản phẩm','Thu nhập','Nhu cầu','Ghi chú','Nguồn UTM','Kênh UTM','Chiến dịch UTM','Nội dung UTM','Từ khóa UTM','Trang nguồn','Liên kết','Trạng thái','Ghi chú chăm sóc','Lịch hẹn gọi lại','Phân loại lead','Hoa hồng dự kiến','Cập nhật lần cuối'];
