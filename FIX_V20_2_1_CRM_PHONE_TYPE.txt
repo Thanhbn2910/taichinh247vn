@@ -1,0 +1,15 @@
+V20.2.1 — CRM Phone Type Fix
+
+Đã sửa lỗi:
+(l.phone || ZALO_PHONE).replace is not a function
+
+Nguyên nhân:
+SĐT trong Google Sheet có thể là kiểu số, trong khi JavaScript .replace() chỉ chạy với chuỗi.
+
+Cách sửa đã áp dụng:
+String(l.phone || ZALO_PHONE).replace(/\D/g,'')
+
+Kết quả:
+- Admin CRM không còn lỗi khi đọc SĐT dạng số.
+- Nút Gọi ngay và Zalo chạy ổn hơn.
+- Không cần sửa thủ công Google Sheet.
