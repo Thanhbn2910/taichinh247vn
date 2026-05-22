@@ -1,41 +1,29 @@
-V18.6 — VAYNHANH247 FULL COMPLETE
+V18.7.1 — VAYNHANH247 VIỆT HÓA CỘT GOOGLE SHEET
 
-Đây là bản đầy đủ hoàn chỉnh gồm:
-- index.html
-- admin.html
-- setup-google-sheet-gmail.html
-- assets/app.js
-- assets/config.js đã gắn GAS URL mới
-- assets/style.css
-- google-apps-script/Code.gs đã có doGet + doPost
-- posts/ blog SEO50
-- landing/ landing SEO
-- robots.txt
-- sitemap.xml
+Đã hoàn thiện theo yêu cầu:
+- Việt hóa toàn bộ tiêu đề cột trong Google Sheet tab Leads.
+- Cập nhật Code.gs để ghi đúng dữ liệu vào các cột tiếng Việt.
+- Gmail báo lead cũng dùng nhãn tiếng Việt.
+- Giữ nguyên website, CRM, SEO50, landing, GA4, GAS URL.
 
-Repo đúng:
-Vaynhanh247vn
-
-Link test đúng, lưu ý phân biệt hoa thường:
-Trang chủ:
-https://thanhbn2910.github.io/Vaynhanh247vn/?v=186
-
-Blog:
-https://thanhbn2910.github.io/Vaynhanh247vn/posts/?v=186
-
-Admin CRM:
-https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=186
-
-Setup:
-https://thanhbn2910.github.io/Vaynhanh247vn/setup-google-sheet-gmail.html?v=186
-
-GAS đã kiểm tra OK:
+GAS URL đang dùng:
 https://script.google.com/macros/s/AKfycbwzekJhpMXJVSWA1nBSp-OCA_2FGAtY6j57lj724G4YF7SUiYNmd_WI4fpaVm4M220QuA/exec
 
-Cách upload:
-1. Giải nén ZIP.
-2. Upload TOÀN BỘ file/folder bên trong lên repo Vaynhanh247vn.
-3. Commit: V18.6 Full Complete.
-4. Chờ GitHub Actions xanh.
-5. Test form trên trang chủ.
-6. Kiểm tra Google Sheet tab Leads + Gmail + Admin CRM.
+Tiêu đề cột mới:
+Mã lead | Thời gian | Họ tên | SĐT | Email | Sản phẩm | Thu nhập | Nhu cầu | Ghi chú | Nguồn UTM | Kênh UTM | Chiến dịch UTM | Nội dung UTM | Từ khóa UTM | Trang nguồn | Liên kết | Trạng thái
+
+VIỆC CẦN LÀM:
+1. Upload toàn bộ bản này lên GitHub repo Vaynhanh247vn.
+2. Vào Google Apps Script.
+3. Thay toàn bộ Code.gs bằng file:
+   google-apps-script/Code.gs
+4. Ctrl + S.
+5. Triển khai -> Quản lý tùy chọn triển khai -> bút chì -> Phiên bản mới -> Triển khai.
+6. Mở GAS URL để kiểm tra, đúng sẽ hiện:
+   {"ok":true,"app":"VayNhanh247","version":"V18.7.1","status":"running"}
+7. Test web:
+   https://thanhbn2910.github.io/Vaynhanh247vn/?v=1871
+
+Lưu ý:
+- Khi chạy lần đầu, script sẽ xóa tiêu đề cũ và tạo lại hàng tiêu đề tiếng Việt.
+- Nếu muốn giữ dữ liệu test cũ, hãy copy sang sheet khác trước.

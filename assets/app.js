@@ -1,3 +1,4 @@
+/* V18.7 Lead Mapping Fixed */
 
 const CRM_CONFIG={
   GAS_URL:(window.VAYNHANH247_CONFIG&&window.VAYNHANH247_CONFIG.GAS_URL)||'', // V18.1 đọc từ assets/config.js
