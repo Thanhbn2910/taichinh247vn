@@ -35,8 +35,8 @@ V19 — VAYNHANH247 LANDING KIẾM LEAD THẬT + CRM PRO
 - Dashboard lead, nguồn, tỷ lệ chốt, hoa hồng dự kiến.
 
 Tài khoản Admin:
-User: admin
-Pass: vay2472026
+User: thanhbn29
+Pass: Thanh2509!
 
 Việc cần làm:
 1. Upload toàn bộ bản V19 lên repo Vaynhanh247vn.

@@ -1,8 +1,8 @@
 /* V19 CRM Conversion Pro */
 const CRM_CONFIG = window.VAYNHANH247_CONFIG || {};
 const GAS_URL = CRM_CONFIG.GAS_URL || '';
-const ADMIN_USER = CRM_CONFIG.ADMIN_USER || 'admin';
-const ADMIN_PASS = CRM_CONFIG.ADMIN_PASS || 'vay2472026';
+const ADMIN_USER = CRM_CONFIG.ADMIN_USER || 'thanhbn29';
+const ADMIN_PASS = CRM_CONFIG.ADMIN_PASS || 'Thanh2509!';
 const ZALO_PHONE = CRM_CONFIG.ZALO_PHONE || '0982821765';
 const PIPELINE = ['Mới','Đã gọi','Quan tâm','Hồ sơ','Giải ngân','Hủy'];
 const LEAD_TYPES = ['Nóng','Ấm','Lạnh'];
