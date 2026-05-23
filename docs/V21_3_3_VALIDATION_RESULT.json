@@ -1,0 +1,10 @@
+{
+  "ai_js_exists": true,
+  "ai_css_exists": true,
+  "index_has_ai_js": true,
+  "index_has_ai_css": true,
+  "ai_button": true,
+  "ai_answers": true,
+  "no_old_conflict": true,
+  "full_base": true
+}

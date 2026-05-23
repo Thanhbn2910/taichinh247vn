@@ -1,0 +1,128 @@
+/* V21.3.3 AI working popup */
+#v2133AiRoot {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 2147483000;
+  font-family: Arial, sans-serif;
+}
+
+#v2133AiButton {
+  background: #0f172a;
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 12px 34px rgba(15,23,42,.28);
+}
+
+#v2133AiPanel {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 58px;
+  width: 380px;
+  max-width: calc(100vw - 28px);
+  background: #fff;
+  border: 1px solid #dbe5e7;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(15,23,42,.25);
+}
+
+.v2133Head {
+  background: #0f766e;
+  color: #fff;
+  padding: 13px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#v2133Close {
+  background: transparent;
+  color: #fff;
+  border: 0;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#v2133Msgs {
+  max-height: 260px;
+  overflow: auto;
+  padding: 12px;
+  background: #f8fafc;
+}
+
+.v2133Msg {
+  padding: 10px 12px;
+  border-radius: 14px;
+  margin: 8px 0;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.v2133Msg.bot {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+}
+
+.v2133Msg.user {
+  background: #d7faea;
+  text-align: right;
+}
+
+.v2133Body {
+  padding: 12px;
+}
+
+#v2133Question {
+  width: 100%;
+  min-height: 74px;
+  border: 1px solid #dbe5e7;
+  border-radius: 14px;
+  padding: 10px;
+  resize: vertical;
+  font-family: Arial, sans-serif;
+}
+
+.v2133Quick {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+
+.v2133Quick button {
+  background: #e7f7f5;
+  color: #0f766e;
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 9px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+#v2133Send {
+  width: 100%;
+  background: #0f766e;
+  color: #fff;
+  border: 0;
+  border-radius: 12px;
+  padding: 11px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+#v2133Call {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #0f766e;
+  font-weight: 900;
+  text-decoration: none;
+}

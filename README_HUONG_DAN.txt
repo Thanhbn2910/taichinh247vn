@@ -1,3 +1,9 @@
+V21.3.3 — HOTFIX AI WORKING
+
+Sửa AI không hoạt động trên trang chủ.
+Test:
+index.html?v=2133
+
 V21.3.2 — HOME PROFESSIONAL UI + AI
 
 Giữ nguyên dữ liệu và luồng realtime.
