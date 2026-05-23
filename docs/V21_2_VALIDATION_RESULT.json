@@ -1,0 +1,9 @@
+{
+  "fix_ai_url_fallback": true,
+  "fix_suggest_income": true,
+  "note_visible": true,
+  "six_cols": true,
+  "colors": true,
+  "timeline_button": true,
+  "full_base": true
+}
