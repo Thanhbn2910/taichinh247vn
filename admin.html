@@ -9,8 +9,8 @@ let LEADS=[]; const root=document.getElementById('root');
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const money=n=>(Number(n)||0).toLocaleString('vi-VN')+' đ';
 function shortDate(v){const d=new Date(v);return isNaN(d)?esc(v||''):d.toLocaleString('vi-VN',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})}
-function header(){return `<header class="header"><div class="brand"><span class="logo">V</span><span>VayNhanh247<small>CRM V21.3 Home Clean UI</small></span></div><div class="nav"><a href="index.html">Trang khách</a><a href="posts/index.html">Blog</a><button onclick="logout()">Đăng xuất</button></div></header>`}
-function login(){root.innerHTML=header()+`<main class="container login"><div class="card"><span class="badge">Admin V21.2</span><h1>Đăng nhập CRM</h1><p class="muted">Giao diện gọn cho 1 người vận hành.</p><input id="u" placeholder="Tài khoản" style="width:100%;margin:8px 0"><input id="p" type="password" placeholder="Mật khẩu" style="width:100%;margin:8px 0"><button onclick="doLogin()">Đăng nhập</button></div></main>`}
+function header(){return `<header class="header"><div class="brand"><span class="logo">V</span><span>VayNhanh247<small>CRM V21.3.1 Hotfix</small></span></div><div class="nav"><a href="index.html">Trang khách</a><a href="posts/index.html">Blog</a><button onclick="logout()">Đăng xuất</button></div></header>`}
+function login(){root.innerHTML=header()+`<main class="container login"><div class="card"><span class="badge">Admin V21.2</span><h1>Đăng nhập CRM</h1><p class="muted">Giao diện gọn cho 1 người vận hành.</p><input id="u" placeholder="Tài khoản" style="width:100%;margin:8px 0"><input id="p" type="password" placeholder="Mật khẩu" style="width:100%;margin:8px 0"><button type="button" onclick="doLogin()">Đăng nhập</button></div></main>`}
 window.doLogin=function(){if(document.getElementById('u').value===USER&&document.getElementById('p').value===PASS){sessionStorage.setItem('v21_login','1');load()}else alert('Sai tài khoản/mật khẩu')};window.logout=function(){sessionStorage.removeItem('v21_login');login()};
 async function api(action,payload={}){const r=await fetch(GAS_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action,...payload})});return await r.json()}
 async function load(){root.innerHTML=header()+`<main class="container"><h1>Đang tải CRM V21.2...</h1></main>`;try{const res=await api('list');if(!res.ok)throw new Error(res.error||'Lỗi Apps Script');LEADS=(res.data||[]).map(normalizeLead);render()}catch(e){root.innerHTML=header()+`<main class="container"><div class="card"><h2>Không tải được CRM</h2><p style="color:#dc2626;font-weight:900">${esc(e.message)}</p><button onclick="load()">Thử lại</button></div></main>`}}
@@ -58,6 +58,13 @@ window.showTimeline=function(id){const l=LEADS.find(x=>String(x.id)===String(id)
 window.closeTimeline=function(){document.getElementById('modalBg').style.display='none'}
 window.logCare=async function(id,note){try{await api('logCare',{id,log:{note}})}catch(e){console.warn(e)}}
 window.exportCSV=function(){const h=['ID','Tên','SĐT','AI_SCORE','AI_GRADE','AI_TAG','NEXT_CALL','FOLLOWUP_DAY','PRODUCT_SUGGEST'];const rows=[h,...LEADS.map(l=>[l.id,l.name,l.phone,l.aiScore,l.aiGrade,l.aiTag,l.nextCall,l.followupDay,l.productSuggest])];const csv=rows.map(r=>r.map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(',')).join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv'}));a.download='V21_2_CRM_Clean_UI_Fix.csv';a.click()}
+
+document.addEventListener('keydown', function(e){
+  if(e.key==='Enter' && document.getElementById('u') && document.getElementById('p')){
+    window.doLogin();
+  }
+});
 if(sessionStorage.getItem('v21_login')==='1')load();else login();
+
 })();
-</script><script src="assets/home-clean-v21-3.js"></script></body></html>
+</script><script src="assets/home-safe-v21-3-1.js"></script></body></html>

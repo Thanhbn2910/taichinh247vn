@@ -1,0 +1,11 @@
+{
+  "index_exists": true,
+  "admin_exists": true,
+  "hero_present": true,
+  "safe_script": true,
+  "no_dangerous_script_include": true,
+  "zalo_disabled": true,
+  "call_label": true,
+  "login_button_type": true,
+  "full_realtime": true
+}
