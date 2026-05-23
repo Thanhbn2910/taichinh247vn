@@ -1,5 +1,6 @@
 // V21.4.3 upgraded chatbot, one floating button only
 (function(){
+if(location.pathname.toLowerCase().includes('admin.html')) return;
 const CALL_PHONE='0822397836';
 const CFG=window.VAYNHANH247_CONFIG||{};
 const GAS_URL=CFG.GAS_URL||'';

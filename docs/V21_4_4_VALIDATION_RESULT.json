@@ -1,0 +1,8 @@
+{
+  "admin_has_crm_clean": true,
+  "admin_no_public_chat_include": true,
+  "public_has_chat": true,
+  "chat_js_admin_guard": true,
+  "full_phone": true,
+  "full_base": true
+}

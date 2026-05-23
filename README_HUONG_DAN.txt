@@ -1,3 +1,12 @@
+V21.4.4 — PUBLIC CHAT ONLY / CRM CLEAN
+
+Test:
+- Trang khách: index.html?v=2144
+- CRM: admin.html?v=2144
+
+CRM không còn nút Chat tư vấn nổi.
+Trang khách vẫn có Chat tư vấn, trong popup có Gọi ngay 0822397836.
+
 V21.4.3 — CHATBOT UPGRADE NO FLOAT OVERLAP
 
 Test: index.html?v=2143
