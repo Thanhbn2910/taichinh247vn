@@ -1,6 +1,6 @@
 /* V21.4 AI Chatbot */
 #v214Chatbot{position:fixed;right:18px;bottom:22px;z-index:2147483000;font-family:Arial,sans-serif}
-#v214Open{background:#0f172a;color:#fff;border:0;border-radius:999px;padding:12px 18px;font-size:15px;font-weight:900;cursor:pointer;box-shadow:0 12px 34px rgba(15,23,42,.28)}
+/*#v214Open{background:#0f172a;color:#fff;border:0;border-radius:999px;padding:12px 18px;font-size:15px;font-weight:900;cursor:pointer;box-shadow:0 12px 34px rgba(15,23,42,.28)}
 #v214Panel{display:none;position:absolute;right:0;bottom:58px;width:410px;max-width:calc(100vw - 28px);background:#fff;border:1px solid #dbe5e7;border-radius:22px;overflow:hidden;box-shadow:0 24px 70px rgba(15,23,42,.25)}
 .v214Head{background:#0f766e;color:#fff;padding:13px 15px;display:flex;align-items:center;justify-content:space-between}
 .v214Head small{display:block;font-size:12px;opacity:.9;margin-top:2px}
@@ -19,3 +19,4 @@
 #v214Lead{background:#e7f7f5;color:#0f766e}
 .v214Input a{display:block;text-align:center;margin-top:10px;color:#0f766e;font-weight:900;text-decoration:none}
 @media(max-width:600px){#v214Chatbot{right:12px;bottom:16px}#v214Panel{width:calc(100vw - 24px)}}
+*/
