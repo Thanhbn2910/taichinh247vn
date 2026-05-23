@@ -1,6 +1,33 @@
-V20.2.4 — DỌN ZALO + ỔN ĐỊNH VẬN HÀNH
+V20.3 — CHẠY KIẾM KHÁCH THẬT
 
-Đã xóa Zalo sai, giữ Gọi ngay 0822397836, đổi nhãn Admin thành CRM V20.2.4.
+Đã hoàn thiện:
+- Checklist Google Search Console.
+- Sitemap sẵn sàng gửi.
+- GA4 tracking sự kiện chuyển đổi.
+- Bộ test 5 lead thật.
+- Kế hoạch SEO 7 ngày.
+- Dashboard vận hành marketing.
+- Tối ưu nhãn phiên bản V20.3.
+- Giữ nguyên: Zalo tạm tắt, Gọi ngay 0822397836, Google Sheet + Gmail + CRM.
+
+Link test sau upload:
+https://thanhbn2910.github.io/Vaynhanh247vn/index.html?v=203
+https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=203
+https://thanhbn2910.github.io/Vaynhanh247vn/posts/index.html?v=203
+https://thanhbn2910.github.io/Vaynhanh247vn/reports/v20-3-operations-dashboard.html?v=203
+https://thanhbn2910.github.io/Vaynhanh247vn/sitemap.xml
+
+Việc cần làm sau khi upload:
+1. Vào Google Search Console gửi sitemap.
+2. Kiểm tra GA4 Realtime.
+3. Test 5 lead thật.
+4. Theo dõi lead/ngày, nguồn, CPL, chuyển đổi.
+5. Thực hiện kế hoạch SEO 7 ngày trong thư mục seo-plan.
+
+--- README cũ ---
+V20.3 — DỌN ZALO + ỔN ĐỊNH VẬN HÀNH
+
+Đã xóa Zalo sai, giữ Gọi ngay 0822397836, đổi nhãn Admin thành CRM V20.3.
 
 V20.2.3 — CRM CLEANPHONE FINAL FIX
 
@@ -34,3 +61,4 @@ https://thanhbn2910.github.io/VayNhanh247vn/reports/marketing-dashboard.html?v=2
 https://thanhbn2910.github.io/VayNhanh247vn/admin.html?v=202332
 
 Lưu ý: bản này có nhiều file, nên upload bằng GitHub Desktop.
+

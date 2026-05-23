@@ -1,0 +1,16 @@
+V20.3 — GA4 tracking checklist
+
+Sự kiện cần theo dõi:
+- page_view_v20_2
+- view_form
+- click_cta
+- submit_lead
+- click_call
+- click_zalo (hiện Zalo đang tạm tắt, không dùng số cũ)
+
+Trong GA4:
+1. Vào Reports → Realtime.
+2. Mở website bằng tab khác.
+3. Click CTA / Gọi ngay / gửi form test.
+4. Kiểm tra event xuất hiện trong Realtime.
+5. Gắn conversion cho submit_lead.

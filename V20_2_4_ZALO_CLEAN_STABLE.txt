@@ -1,4 +1,4 @@
-V20.2.4 — Dọn Zalo + ổn định vận hành
+V20.3 — Dọn Zalo + ổn định vận hành
 
 Đã hoàn thiện:
 - Xóa toàn bộ số Zalo sai 0982821765.
@@ -7,7 +7,7 @@ V20.2.4 — Dọn Zalo + ổn định vận hành
 - Giữ nút Gọi ngay số 0822397836.
 - Cập nhật assets/config.js.
 - Giữ nguyên form gửi Google Sheet + Gmail + CRM.
-- Đổi nhãn Admin từ CRM V19.5 thành CRM V20.2.4.
+- Đổi nhãn Admin từ CRM V19.5 thành CRM V20.3.
 - Giữ nguyên SEO 200 bài, landing, GA4 tracking, dashboard marketing, CRM.
 
 Test:

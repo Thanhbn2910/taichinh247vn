@@ -1,0 +1,21 @@
+V20.3 — Google Search Console checklist
+
+1. Mở Google Search Console.
+2. Chọn property website: https://thanhbn2910.github.io/Vaynhanh247vn
+3. Vào Sitemaps.
+4. Gửi sitemap:
+   https://thanhbn2910.github.io/Vaynhanh247vn/sitemap.xml
+
+5. Sau khi gửi:
+   - Kiểm tra trạng thái sitemap: Success
+   - Kiểm tra số URL phát hiện
+   - Dùng URL Inspection cho:
+     https://thanhbn2910.github.io/Vaynhanh247vn/
+     https://thanhbn2910.github.io/Vaynhanh247vn/posts/index.html
+     https://thanhbn2910.github.io/Vaynhanh247vn/landing/vay-tin-chap.html
+
+6. Bấm Request indexing cho các URL quan trọng:
+   - Trang chủ
+   - Blog index
+   - 5 landing chính
+   - 5 category SEO chính

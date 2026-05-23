@@ -15,7 +15,7 @@ function setup(){document.querySelectorAll('form[data-lead]').forEach(f=>f.addEv
 document.addEventListener('DOMContentLoaded',setup);
 })();
 
-/* V20.2.4 — Disable Zalo until new number is provided; keep Call Now */
+/* V20.3 — Disable Zalo until new number is provided; keep Call Now */
 document.addEventListener('DOMContentLoaded', function(){
   var cfg = window.VAYNHANH247_CONFIG || {};
   var callPhone = cfg.CALL_PHONE || '0822397836';
