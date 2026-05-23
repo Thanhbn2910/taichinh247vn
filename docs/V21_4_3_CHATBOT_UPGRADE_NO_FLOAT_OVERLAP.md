@@ -1,0 +1,1 @@
+V21.4.3: bỏ 2 nút nổi bị đè, chỉ còn 1 nút Chat tư vấn; trong popup có Gọi ngay, Gửi, Tạo lead; nâng cấp chatbot nhớ ngữ cảnh.

@@ -1,0 +1,25 @@
+/* V21.4.3: one clean chatbot, no bottom overlap */
+html,body,input,select,textarea,button{font-family:"Segoe UI",Arial,sans-serif!important}
+#v21AiBox,#aiProV2132,#v2133AiRoot,#v214Chatbot,#v2142Actions,#v2142Panel,
+[href*="zalo.me"],.zalo,.zalo-btn,.btn-zalo{display:none!important;visibility:hidden!important;pointer-events:none!important}
+
+#v2143Root{position:fixed;right:20px;bottom:24px;z-index:2147483000}
+#v2143Open{background:#0f172a;color:#fff;border:0;border-radius:999px;padding:13px 20px;font-size:15px;font-weight:900;cursor:pointer;box-shadow:0 14px 34px rgba(15,23,42,.28)}
+#v2143Panel{display:none;position:fixed;right:20px;bottom:84px;width:390px;max-width:calc(100vw - 30px);background:#fff;border:1px solid #dbe5e7;border-radius:22px;overflow:hidden;box-shadow:0 24px 70px rgba(15,23,42,.25);z-index:2147483001}
+.v2143Head{background:#0f766e;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.v2143Head b{font-size:16px}.v2143Head small{display:block;font-size:12px;opacity:.9;margin-top:2px}
+#v2143Close{background:transparent;border:0;color:white;font-size:24px;cursor:pointer}
+#v2143Msgs{height:300px;overflow:auto;background:#f8fafc;padding:12px}
+.v2143Msg{padding:10px 12px;border-radius:14px;margin:8px 0;line-height:1.45;font-size:14px}
+.v2143Msg.bot{background:#fff;border:1px solid #e2e8f0}
+.v2143Msg.user{background:#d7faea;text-align:right;margin-left:30px}
+.v2143Quick{display:flex;gap:6px;flex-wrap:wrap;padding:10px 12px 0;background:white}
+.v2143Quick button{background:#e7f7f5;color:#0f766e;border:0;border-radius:999px;padding:7px 9px;font-size:12px;font-weight:800;cursor:pointer}
+.v2143Input{padding:12px;background:white}
+#v2143Text{width:100%;min-height:72px;border:1px solid #dbe5e7;border-radius:14px;padding:10px;font-size:14px;resize:vertical}
+.v2143Actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.v2143Actions button,.v2143Actions a{border:0;border-radius:12px;padding:11px;font-weight:900;text-align:center;text-decoration:none;cursor:pointer;font-size:14px}
+#v2143Send{background:#0f766e;color:#fff}
+#v2143Lead{background:#e7f7f5;color:#0f766e}
+#v2143Call{background:#ea580c;color:#fff;grid-column:1/3}
+@media(max-width:600px){#v2143Root{right:12px;bottom:16px}#v2143Panel{right:12px;bottom:72px;width:calc(100vw - 24px)}#v2143Msgs{height:280px}}
