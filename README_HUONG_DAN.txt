@@ -1,3 +1,26 @@
+V20.7 — PRODUCTION / KIẾM KHÁCH THẬT
+
+Đây là bản chuyển từ demo đẹp sang hệ thống chạy vận hành thật:
+- Google Sheet realtime.
+- CRM đồng bộ Sheet.
+- Timeline, AI score, nhật ký chăm sóc lưu Sheet.
+- AI Follow-up A/B/C.
+- Funnel doanh thu + CPL/CPA/ROAS.
+- SEO thêm 100 bài cluster.
+
+Bắt buộc sau khi upload web:
+1. Mở Apps Script.
+2. Dán file google-apps-script/Code.gs bản V20.7.
+3. Deploy phiên bản mới.
+4. Test:
+https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=207
+https://thanhbn2910.github.io/Vaynhanh247vn/posts/index.html?v=207
+
+Admin:
+- thanhbn29
+- Thanh2509!
+
+--- README cũ ---
 V20.6 — AI VẬN HÀNH THẬT
 
 Đã nâng hệ thống từ CRM + AI tư vấn lên hệ thống kiếm khách + CRM + AI vận hành thật.
@@ -112,6 +135,7 @@ https://thanhbn2910.github.io/VayNhanh247vn/reports/marketing-dashboard.html?v=2
 https://thanhbn2910.github.io/VayNhanh247vn/admin.html?v=202332
 
 Lưu ý: bản này có nhiều file, nên upload bằng GitHub Desktop.
+
 
 
 
