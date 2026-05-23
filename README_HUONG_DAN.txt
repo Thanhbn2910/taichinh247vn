@@ -1,3 +1,17 @@
+V20.6 — AI VẬN HÀNH THẬT
+
+Đã nâng hệ thống từ CRM + AI tư vấn lên hệ thống kiếm khách + CRM + AI vận hành thật.
+
+Link test sau upload:
+https://thanhbn2910.github.io/Vaynhanh247vn/index.html?v=206
+https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=206
+https://thanhbn2910.github.io/Vaynhanh247vn/reports/v20-6-ai-operations-dashboard.html?v=206
+
+Tài khoản Admin:
+- thanhbn29
+- Thanh2509!
+
+--- README cũ ---
 V20.5.1 — AI TƯ VẤN + CHĂM SÓC LEAD TỰ ĐỘNG
 
 Đã hoàn thiện sâu logic AI + CRM:
@@ -98,6 +112,7 @@ https://thanhbn2910.github.io/VayNhanh247vn/reports/marketing-dashboard.html?v=2
 https://thanhbn2910.github.io/VayNhanh247vn/admin.html?v=202332
 
 Lưu ý: bản này có nhiều file, nên upload bằng GitHub Desktop.
+
 
 
 
