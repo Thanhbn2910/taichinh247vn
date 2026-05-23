@@ -1,0 +1,12 @@
+{
+  "index_has_final_css": true,
+  "index_has_final_js": true,
+  "admin_no_public_widget": true,
+  "panel_250": true,
+  "panel_360": true,
+  "messages_150": true,
+  "two_public_buttons": true,
+  "full_phone": true,
+  "hero_pulled_up": true,
+  "base_kept": true
+}

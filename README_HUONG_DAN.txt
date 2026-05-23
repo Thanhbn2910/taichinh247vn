@@ -1,3 +1,9 @@
+V21.4.6 — UI FINAL FIX2
+
+Test:
+https://thanhbn2910.github.io/Vaynhanh247vn/index.html?v=2146
+https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=2146
+
 V21.4.5 — FINAL UI FIX
 
 Test sau upload:
