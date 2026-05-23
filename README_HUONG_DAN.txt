@@ -1,3 +1,25 @@
+V21 FULL — REALTIME AI CRM
+
+Đây là bản đầy đủ để đưa thẳng vào repo đang chạy.
+
+Upload:
+- Giữ .git
+- Xóa web cũ
+- Copy toàn bộ V21 vào repo
+- Commit + Push
+
+Bắt buộc cập nhật Apps Script:
+- Dán google-apps-script/Code.gs
+- Deploy New version
+
+Test:
+https://thanhbn2910.github.io/Vaynhanh247vn/index.html?v=21
+https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=21
+
+Admin:
+thanhbn29 / Thanh2509!
+
+--- README cũ ---
 V20.7.1 — PRODUCTION / KIẾM KHÁCH THẬT
 
 Đây là bản chuyển từ demo đẹp sang hệ thống chạy vận hành thật:
@@ -135,6 +157,7 @@ https://thanhbn2910.github.io/VayNhanh247vn/reports/marketing-dashboard.html?v=2
 https://thanhbn2910.github.io/VayNhanh247vn/admin.html?v=202332
 
 Lưu ý: bản này có nhiều file, nên upload bằng GitHub Desktop.
+
 
 
 

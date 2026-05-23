@@ -1,0 +1,17 @@
+{
+  "index_html": true,
+  "admin_html": true,
+  "config_js": true,
+  "v21_js": true,
+  "code_gs": true,
+  "posts": true,
+  "landing": true,
+  "reports": true,
+  "robots": true,
+  "sitemap": true,
+  "sheet_ai_fields": true,
+  "web_to_gas": true,
+  "crm_list": true,
+  "no_double_zalo": true,
+  "no_double_solo": true
+}
