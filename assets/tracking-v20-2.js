@@ -1,3 +1,4 @@
+function cleanPhone_(v){return String(v || '').replace(/\D/g,'');}
 (function(){
 window.dataLayer=window.dataLayer||[];
 window.gtag=window.gtag||function(){dataLayer.push(arguments)};

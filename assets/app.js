@@ -1,3 +1,4 @@
+function cleanPhone_(v){return String(v || '').replace(/\D/g,'');}
 (function(){
 const CFG=window.VAYNHANH247_CONFIG||{};
 const GAS_URL=CFG.GAS_URL||'';

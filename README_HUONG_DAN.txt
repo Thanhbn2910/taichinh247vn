@@ -1,3 +1,7 @@
+V20.2.2 — CRM STRINGSTRING FINAL FIX
+
+Đã sửa lỗi StringString is not defined trong Admin CRM.
+
 V20.2.1 — CRM PHONE TYPE FIX
 
 Đã sửa lỗi SĐT dạng số làm Admin CRM không tải được.
@@ -16,9 +20,9 @@ V20.2 — VẬN HÀNH KIẾM KHÁCH THẬT
 - Trang reports/marketing-dashboard.html theo dõi khách/ngày / chi phí / CPL / chuyển đổi.
 
 Test sau upload:
-https://thanhbn2910.github.io/VayNhanh247vn/index.html?v=2021
-https://thanhbn2910.github.io/VayNhanh247vn/posts/index.html?v=2021
+https://thanhbn2910.github.io/VayNhanh247vn/index.html?v=20222
+https://thanhbn2910.github.io/VayNhanh247vn/posts/index.html?v=20222
 https://thanhbn2910.github.io/VayNhanh247vn/reports/marketing-dashboard.html?v=202
-https://thanhbn2910.github.io/VayNhanh247vn/admin.html?v=2021
+https://thanhbn2910.github.io/VayNhanh247vn/admin.html?v=20222
 
 Lưu ý: bản này có nhiều file, nên upload bằng GitHub Desktop.

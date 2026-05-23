@@ -1,3 +1,4 @@
+function cleanPhone_(v){return String(v || '').replace(/\D/g,'');}
 /* V19.2 FINAL ADMIN CRM */
 (function(){
 const CFG = window.VAYNHANH247_CONFIG || {};
@@ -153,7 +154,7 @@ window.renderTable = function(){
     <td><select onchange="saveLead('${esc(l.id)}','leadType',this.value)">${LEAD_TYPES.map(t=>`<option ${t===(l.leadType||'Ấm')?'selected':''}>${t}</option>`).join('')}</select></td>
     <td><input type="datetime-local" value="${toLocal(l.callbackAt)}" onchange="saveLead('${esc(l.id)}','callbackAt',this.value)"></td>
     <td><textarea onchange="saveLead('${esc(l.id)}','careNote',this.value)" placeholder="Nhập ghi chú...">${esc(l.careNote||'')}</textarea></td>
-    <td><a class="btn" href="tel:${esc(l.phone)}">Gọi ngay</a><a class="btn secondary" target="_blank" href="https://zalo.me/${esc(StringString(l.phone||ZALO_PHONE).replace(/[^0-9]/g,''))}">Zalo</a></td>
+    <td><a class="btn" href="tel:${esc(l.phone)}">Gọi ngay</a><a class="btn secondary" target="_blank" href="https://zalo.me/${esc(StringcleanPhone_(l.phone||ZALO_PHONE))}">Zalo</a></td>
   </tr>`).join('') || '<tr><td colspan="7">Chưa có lead. Lead chỉ hiển thị khi khách gửi form đăng ký.</td></tr>';
 };
 
