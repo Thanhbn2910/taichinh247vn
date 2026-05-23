@@ -1,3 +1,18 @@
+V21.3.2 — HOME PROFESSIONAL UI + AI
+
+Giữ nguyên dữ liệu và luồng realtime.
+
+Sửa trang chủ:
+- Nút nhỏ chuyên nghiệp hơn.
+- Ẩn version khỏi giao diện người dùng.
+- Bỏ dòng Google Sheet + Gmail + CRM.
+- Ẩn Zalo.
+- Gọi ngay 0822397836.
+- AI tư vấn trả lời theo nội dung website.
+
+Test:
+https://thanhbn2910.github.io/Vaynhanh247vn/index.html?v=2132
+
 V21.3.1 HOTFIX — HOME + CRM
 
 Sửa lỗi:

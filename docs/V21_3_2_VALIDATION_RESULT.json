@@ -1,0 +1,11 @@
+{
+  "home_js": true,
+  "home_css": true,
+  "index_has_js": true,
+  "index_has_css": true,
+  "zalo_hidden": true,
+  "call_label": true,
+  "ai_answers": true,
+  "no_technical_copy_index": true,
+  "full_base": true
+}
