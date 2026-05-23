@@ -1,0 +1,12 @@
+
+/* V21.4.5 FINAL: CRM/admin không có chatbot/nút nổi */
+#v2145Root,#v2145Panel,#v2143Root,#v2143Panel,#v2142Actions,#v2142Panel,
+#v214Chatbot,#v2133AiRoot,#v21AiBox,#aiProV2132,
+[href*="zalo.me"],.zalo,.zalo-btn,.btn-zalo {
+  display:none!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+}
+html,body,input,select,textarea,button {
+  font-family:"Segoe UI",Arial,sans-serif!important;
+}

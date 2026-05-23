@@ -1,0 +1,11 @@
+{
+  "public_has_new_chat": true,
+  "admin_has_no_widget_css": true,
+  "admin_no_public_chat_script": true,
+  "panel_width_250": true,
+  "panel_height_360": true,
+  "messages_height_150": true,
+  "no_tao_lead": true,
+  "full_phone": true,
+  "full_base": true
+}

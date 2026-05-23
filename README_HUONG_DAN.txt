@@ -1,3 +1,9 @@
+V21.4.5 — FINAL UI FIX
+
+Test sau upload:
+https://thanhbn2910.github.io/Vaynhanh247vn/index.html?v=2145
+https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=2145
+
 V21.4.4 — PUBLIC CHAT ONLY / CRM CLEAN
 
 Test:

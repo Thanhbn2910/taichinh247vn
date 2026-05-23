@@ -1,0 +1,124 @@
+
+/* V21.4.5 FINAL: public chat nhỏ gọn, không chồng UI */
+html,body,input,select,textarea,button {
+  font-family:"Segoe UI",Arial,sans-serif!important;
+}
+#v2143Root,#v2143Panel,#v2142Actions,#v2142Panel,#v214Chatbot,#v2133AiRoot,#v21AiBox,#aiProV2132,
+[href*="zalo.me"],.zalo,.zalo-btn,.btn-zalo {
+  display:none!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+}
+#v2145Root {
+  position:fixed;
+  right:18px;
+  bottom:22px;
+  z-index:2147483000;
+}
+#v2145Open {
+  background:#0f172a;
+  color:#fff;
+  border:0;
+  border-radius:999px;
+  padding:11px 16px;
+  font-size:14px;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 10px 26px rgba(15,23,42,.25);
+}
+#v2145Panel {
+  display:none;
+  position:fixed;
+  right:18px;
+  bottom:76px;
+  width:250px!important;
+  max-width:250px!important;
+  height:360px!important;
+  background:#fff;
+  border:1px solid #dbe5e7;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 20px 54px rgba(15,23,42,.24);
+  z-index:2147483001;
+}
+.v2145Head {
+  background:#0f766e;
+  color:#fff;
+  padding:9px 11px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.v2145Head b {font-size:13px}
+#v2145Close {
+  border:0;
+  background:transparent;
+  color:#fff;
+  font-size:20px;
+  cursor:pointer;
+}
+#v2145Msgs {
+  height:150px!important;
+  max-height:150px!important;
+  overflow:auto;
+  padding:8px;
+  background:#f8fafc;
+}
+.v2145Msg {
+  padding:8px 9px;
+  border-radius:12px;
+  margin:6px 0;
+  line-height:1.35;
+  font-size:12.5px;
+}
+.v2145Msg.bot {background:#fff;border:1px solid #e2e8f0}
+.v2145Msg.user {background:#d7faea;text-align:right;margin-left:16px}
+.v2145Quick {
+  display:flex;
+  gap:5px;
+  flex-wrap:wrap;
+  padding:7px 8px 0;
+}
+.v2145Quick button {
+  background:#e7f7f5;
+  color:#0f766e;
+  border:0;
+  border-radius:999px;
+  padding:5px 7px;
+  font-size:11px;
+  font-weight:800;
+  cursor:pointer;
+}
+.v2145Input {padding:8px}
+#v2145Text {
+  width:100%;
+  min-height:48px;
+  max-height:60px;
+  border:1px solid #dbe5e7;
+  border-radius:12px;
+  padding:8px;
+  font-size:12.5px;
+  resize:none;
+}
+.v2145Actions {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:6px;
+  margin-top:6px;
+}
+#v2145Send,#v2145Call {
+  border:0;
+  border-radius:11px;
+  padding:9px;
+  font-weight:900;
+  text-align:center;
+  text-decoration:none;
+  font-size:12.5px;
+  cursor:pointer;
+}
+#v2145Send {background:#0f766e;color:#fff}
+#v2145Call {background:#ea580c;color:#fff}
+@media(max-width:600px){
+  #v2145Root{right:12px;bottom:16px}
+  #v2145Panel{right:12px;bottom:66px;width:250px!important;max-width:calc(100vw - 24px)!important}
+}
