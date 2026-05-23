@@ -1,4 +1,4 @@
-# V20.7 — Production / kiếm khách thật
+# V20.7.1 — Production / kiếm khách thật
 
 Đã hoàn thiện:
 1. Dữ liệu thật

@@ -1,4 +1,4 @@
-V20.7 — PRODUCTION / KIẾM KHÁCH THẬT
+V20.7.1 — PRODUCTION / KIẾM KHÁCH THẬT
 
 Đây là bản chuyển từ demo đẹp sang hệ thống chạy vận hành thật:
 - Google Sheet realtime.
@@ -10,7 +10,7 @@ V20.7 — PRODUCTION / KIẾM KHÁCH THẬT
 
 Bắt buộc sau khi upload web:
 1. Mở Apps Script.
-2. Dán file google-apps-script/Code.gs bản V20.7.
+2. Dán file google-apps-script/Code.gs bản V20.7.1.
 3. Deploy phiên bản mới.
 4. Test:
 https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=207

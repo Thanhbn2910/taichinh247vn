@@ -1,0 +1,18 @@
+{
+  "index.html": true,
+  "admin.html": true,
+  "assets/config.js": true,
+  "assets/ai-score-v20-9.js": true,
+  "assets/automation-v20-9.js": true,
+  "assets/knowledge-v20-9.js": true,
+  "assets/followup-v20-9.js": true,
+  "google-apps-script/Code.gs": true,
+  "robots.txt": true,
+  "sitemap.xml": true,
+  "index_not_placeholder": true,
+  "admin_not_placeholder": true,
+  "has_posts": true,
+  "has_landing": true,
+  "has_reports": true,
+  "no_double_zalo": true
+}
