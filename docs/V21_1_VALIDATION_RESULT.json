@@ -1,0 +1,7 @@
+{
+  "admin_clean_ui": true,
+  "hide_raw_timeline": true,
+  "view_timeline_button": true,
+  "six_columns": true,
+  "keeps_realtime_flow": true
+}

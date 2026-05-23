@@ -1,0 +1,1 @@
+V21.1 CRM Clean UI: ẩn JSON timeline, thêm nút Xem timeline, bảng 6 cột dễ nhìn.

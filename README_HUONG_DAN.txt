@@ -1,3 +1,7 @@
+V21.1 — CRM CLEAN UI
+
+Test sau upload: admin.html?v=211
+
 V21 FULL — REALTIME AI CRM
 
 Đây là bản đầy đủ để đưa thẳng vào repo đang chạy.
