@@ -1,0 +1,15 @@
+V20.2.4 — Dọn Zalo + ổn định vận hành
+
+Đã hoàn thiện:
+- Xóa toàn bộ số Zalo sai 0982821765.
+- Tắt link Zalo cố định.
+- Đổi nút Zalo thành “Zalo sắp cập nhật”.
+- Giữ nút Gọi ngay số 0822397836.
+- Cập nhật assets/config.js.
+- Giữ nguyên form gửi Google Sheet + Gmail + CRM.
+- Đổi nhãn Admin từ CRM V19.5 thành CRM V20.2.4.
+- Giữ nguyên SEO 200 bài, landing, GA4 tracking, dashboard marketing, CRM.
+
+Test:
+https://thanhbn2910.github.io/Vaynhanh247vn/index.html?v=2024
+https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=2024

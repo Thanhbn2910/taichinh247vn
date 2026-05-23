@@ -1,3 +1,7 @@
+V20.2.4 — DỌN ZALO + ỔN ĐỊNH VẬN HÀNH
+
+Đã xóa Zalo sai, giữ Gọi ngay 0822397836, đổi nhãn Admin thành CRM V20.2.4.
+
 V20.2.3 — CRM CLEANPHONE FINAL FIX
 
 Đã sửa lỗi StringcleanPhone_ is not defined trong Admin CRM.

@@ -2,7 +2,7 @@ function cleanPhone_(v){return String(v || '').replace(/\D/g,'');}
 (function(){
 const CFG=window.VAYNHANH247_CONFIG||{};
 const GAS_URL=CFG.GAS_URL||'';
-const ZALO_PHONE=CFG.ZALO_PHONE||'0982821765';
+const ZALO_PHONE=CFG.ZALO_PHONE||'0822397836';
 const GA4_ID=CFG.GA4_ID||'G-C2Q2NJNZTC';
 function track(name,params={}){try{if(window.gtag) gtag('event',name,params)}catch(e){}}
 function getUTM(){const p=new URLSearchParams(location.search);return{utm_source:p.get('utm_source')||'',utm_medium:p.get('utm_medium')||'',utm_campaign:p.get('utm_campaign')||'',utm_content:p.get('utm_content')||'',utm_term:p.get('utm_term')||'',sourcePage:document.title,url:location.href}}
@@ -14,3 +14,17 @@ window.openAI=function(){track('open_chat');alert('AI tư vấn: Bạn để l�
 function setup(){document.querySelectorAll('form[data-lead]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();sendLead(f)}));document.querySelectorAll('[data-zalo]').forEach(a=>a.href='https://zalo.me/'+ZALO_PHONE);document.querySelectorAll('[data-call]').forEach(a=>a.href='tel:'+ZALO_PHONE);setTimeout(()=>{if(!sessionStorage.getItem('popup_seen')){sessionStorage.setItem('popup_seen','1');openLeadPopup()}},12000);let shown=false;window.addEventListener('scroll',()=>{if(!shown && window.scrollY>document.body.scrollHeight*.4){shown=true;openLeadPopup()}});document.addEventListener('mouseleave',e=>{if(e.clientY<5 && !sessionStorage.getItem('exit_seen')){sessionStorage.setItem('exit_seen','1');openLeadPopup()}})}
 document.addEventListener('DOMContentLoaded',setup);
 })();
+
+/* V20.2.4 — Disable Zalo until new number is provided; keep Call Now */
+document.addEventListener('DOMContentLoaded', function(){
+  var cfg = window.VAYNHANH247_CONFIG || {};
+  var callPhone = cfg.CALL_PHONE || '0822397836';
+  document.querySelectorAll('[data-zalo], a[href*="zalo.me"], a[href="#zalo-sap-cap-nhat"]').forEach(function(a){
+    a.setAttribute('href', '#zalo-sap-cap-nhat');
+    a.innerHTML = a.innerHTML.replace(/Chat Zalo|Zalo/g, 'Zalo sắp cập nhật');
+    a.onclick = function(e){ e.preventDefault(); alert('Zalo sắp cập nhật. Vui lòng bấm Gọi ngay.'); };
+  });
+  document.querySelectorAll('[data-call], a[href^="tel:"]').forEach(function(a){
+    a.setAttribute('href', 'tel:' + callPhone);
+  });
+});

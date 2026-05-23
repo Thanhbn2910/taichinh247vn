@@ -5,7 +5,7 @@ const CFG = window.VAYNHANH247_CONFIG || {};
 const GAS_URL = CFG.GAS_URL || '';
 const ADMIN_USER = CFG.ADMIN_USER || 'thanhbn29';
 const ADMIN_PASS = CFG.ADMIN_PASS || 'Thanh2509!';
-const ZALO_PHONE = CFG.ZALO_PHONE || '0982821765';
+const ZALO_PHONE = CFG.ZALO_PHONE || '0822397836';
 const PIPELINE = ['Mới','Đã gọi','Quan tâm','Hồ sơ','Giải ngân','Hủy'];
 const LEAD_TYPES = ['Nóng','Ấm','Lạnh'];
 
@@ -154,7 +154,7 @@ window.renderTable = function(){
     <td><select onchange="saveLead('${esc(l.id)}','leadType',this.value)">${LEAD_TYPES.map(t=>`<option ${t===(l.leadType||'Ấm')?'selected':''}>${t}</option>`).join('')}</select></td>
     <td><input type="datetime-local" value="${toLocal(l.callbackAt)}" onchange="saveLead('${esc(l.id)}','callbackAt',this.value)"></td>
     <td><textarea onchange="saveLead('${esc(l.id)}','careNote',this.value)" placeholder="Nhập ghi chú...">${esc(l.careNote||'')}</textarea></td>
-    <td><a class="btn" href="tel:${esc(l.phone)}">Gọi ngay</a><a class="btn secondary" target="_blank" href="https://zalo.me/${esc(cleanPhone_(l.phone||ZALO_PHONE))}">Zalo</a></td>
+    <td><a class="btn" href="tel:${esc(l.phone)}">Gọi ngay</a><a class="btn secondary" target="_blank" href="#zalo-sap-cap-nhat">Zalo sắp cập nhật</a></td>
   </tr>`).join('') || '<tr><td colspan="7">Chưa có lead. Lead chỉ hiển thị khi khách gửi form đăng ký.</td></tr>';
 };
 
