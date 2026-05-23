@@ -1,3 +1,20 @@
+V20.5.1 — AI TƯ VẤN + CHĂM SÓC LEAD TỰ ĐỘNG
+
+Đã hoàn thiện sâu logic AI + CRM:
+- AI tư vấn trên web.
+- Tự tạo lead từ chat.
+- Chấm điểm lead.
+- Phân loại Nóng/Ấm/Lạnh.
+- Kịch bản gọi theo từng sản phẩm.
+- Giữ Google Sheet + Gmail + CRM.
+- Giữ Gọi ngay 0822397836.
+- Zalo tạm tắt.
+
+Link test sau upload:
+https://thanhbn2910.github.io/Vaynhanh247vn/index.html?v=2051
+https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=2051
+
+--- README cũ ---
 V20.4 — VẬN HÀNH THẬT + ĐO HIỆU QUẢ
 
 Đã hoàn thiện:
@@ -81,5 +98,6 @@ https://thanhbn2910.github.io/VayNhanh247vn/reports/marketing-dashboard.html?v=2
 https://thanhbn2910.github.io/VayNhanh247vn/admin.html?v=202332
 
 Lưu ý: bản này có nhiều file, nên upload bằng GitHub Desktop.
+
 
 

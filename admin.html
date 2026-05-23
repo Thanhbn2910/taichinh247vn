@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Admin CRM V20.4 - Vận hành thật + đo hiệu quả</title>
+<title>Admin CRM V20.5.1 - AI tư vấn + chăm sóc lead tự động</title>
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f2fbfa;color:#0f172a}a{text-decoration:none;color:inherit}
 .header{height:78px;background:white;border-bottom:1px solid #dbe5e7;display:flex;align-items:center;justify-content:space-between;padding:0 7%;position:sticky;top:0;z-index:50}
@@ -48,12 +48,12 @@ const dateKey=v=>{const d=new Date(v);return isNaN(d)?'Không rõ':d.toISOString
 const todayKey=()=>new Date().toISOString().slice(0,10);
 function weekStart(d=new Date()){let x=new Date(d);let day=x.getDay()||7;x.setDate(x.getDate()-day+1);x.setHours(0,0,0,0);return x}
 function monthStart(d=new Date()){return new Date(d.getFullYear(),d.getMonth(),1)}
-function header(){return `<header class="header"><div class="brand"><span class="logo">V</span><span>VayNhanh247<small>CRM V20.4 Vận hành thật + đo hiệu quả</small></span></div><div class="nav"><a href="index.html">Trang khách</a><a href="posts/index.html">Blog</a><a href="reports/v20-4-performance-dashboard.html">Báo cáo</a>${sessionStorage.getItem('v247_login')==='1'?'<button onclick="logout()">Đăng xuất</button>':''}</div></header>`}
-function renderLogin(){sessionStorage.removeItem('v247_login');root.innerHTML=header()+`<section class="login-page"><div class="card login-card"><span class="badge">Admin V20.4</span><h1>Đăng nhập CRM</h1><p>CRM đo lead/ngày, CPL, nguồn traffic, pipeline, hoa hồng và báo cáo tháng.</p><label>Tài khoản</label><input id="u" placeholder="Tài khoản"><label>Mật khẩu</label><input id="p" type="password" placeholder="Mật khẩu"><div style="margin-top:16px"><button onclick="login()">Đăng nhập</button></div></div></section>`}
+function header(){return `<header class="header"><div class="brand"><span class="logo">V</span><span>VayNhanh247<small>CRM V20.5.1 AI tư vấn + chăm sóc lead tự động</small></span></div><div class="nav"><a href="index.html">Trang khách</a><a href="posts/index.html">Blog</a><a href="reports/v20-4-performance-dashboard.html">Báo cáo</a>${sessionStorage.getItem('v247_login')==='1'?'<button onclick="logout()">Đăng xuất</button>':''}</div></header>`}
+function renderLogin(){sessionStorage.removeItem('v247_login');root.innerHTML=header()+`<section class="login-page"><div class="card login-card"><span class="badge">Admin V20.5.1</span><h1>Đăng nhập CRM</h1><p>CRM đo lead/ngày, CPL, nguồn traffic, pipeline, hoa hồng và báo cáo tháng.</p><label>Tài khoản</label><input id="u" placeholder="Tài khoản"><label>Mật khẩu</label><input id="p" type="password" placeholder="Mật khẩu"><div style="margin-top:16px"><button onclick="login()">Đăng nhập</button></div></div></section>`}
 window.login=function(){const u=document.getElementById('u').value.trim();const p=document.getElementById('p').value;if(u===ADMIN_USER&&p===ADMIN_PASS){sessionStorage.setItem('v247_login','1');loadCRM();}else alert('Sai tài khoản hoặc mật khẩu.');}
 window.logout=function(){renderLogin();}
 async function api(action,payload={}){const r=await fetch(GAS_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action,...payload})});return await r.json();}
-async function loadCRM(){root.innerHTML=header()+`<main class="container"><h1>Đang tải CRM V20.4...</h1><p>Đang đọc lead thật từ Google Sheet.</p></main>`;try{const res=await api('list');if(!res.ok)throw new Error(res.error||'Apps Script trả lỗi');LEADS=res.data||[];CARE_LOG=JSON.parse(localStorage.getItem('v204_care_log')||'[]');renderCRM();}catch(e){root.innerHTML=header()+`<main class="container"><div class="notice"><b>Không tải được CRM:</b> ${esc(e.message)}<br>Hãy kiểm tra Apps Script hoặc mạng.</div><button onclick="loadCRM()">Thử lại</button></main>`}}
+async function loadCRM(){root.innerHTML=header()+`<main class="container"><h1>Đang tải CRM V20.5.1...</h1><p>Đang đọc lead thật từ Google Sheet.</p></main>`;try{const res=await api('list');if(!res.ok)throw new Error(res.error||'Apps Script trả lỗi');LEADS=res.data||[];CARE_LOG=JSON.parse(localStorage.getItem('v204_care_log')||'[]');renderCRM();}catch(e){root.innerHTML=header()+`<main class="container"><div class="notice"><b>Không tải được CRM:</b> ${esc(e.message)}<br>Hãy kiểm tra Apps Script hoặc mạng.</div><button onclick="loadCRM()">Thử lại</button></main>`}}
 function sourceOf(l){const s=String(l.utm_source||l.sourcePage||l.url||'').toLowerCase();if(s.includes('facebook')||s==='fb')return'Facebook';if(s.includes('google')||s.includes('seo')||s.includes('blog')||s.includes('organic'))return'SEO';if(s.includes('zalo'))return'Zalo';if(!s||s==='không rõ')return'Direct';return'UTM/Khác'}
 function isWon(l){return (l.status||'Mới')==='Giải ngân'}
 function isProfile(l){return ['Hồ sơ','Giải ngân'].includes(l.status||'Mới')}
@@ -66,7 +66,7 @@ function calc(){const now=new Date(), ws=weekStart(now), ms=monthStart(now), td=
 function rowClass(l){let c=(l.leadType==='Nóng'?'hot':l.leadType==='Lạnh'?'cold':'warm'); if(isOverdue(l))c+=' overdue'; else if(isUnhandled(l))c+=' unhandled'; return c}
 function chartHTML(map){const entries=Object.entries(map).sort().slice(-14);const max=Math.max(1,...entries.map(x=>x[1]));return `<div class="chart">${entries.map(([k,v])=>`<div class="col"><div class="barcol" title="${k}: ${v}" style="height:${Math.max(3,Math.round(v/max*190))}px"></div><small>${k.slice(5)}</small></div>`).join('')}</div>`}
 function sourceHTML(src,total){return Object.entries(src).map(([k,v])=>`<p><b>${esc(k)}:</b> ${v} lead</p><div class="bar"><span style="width:${total?Math.round(v/total*100):0}%"></span></div>`).join('')||'<p>Chưa có nguồn.</p>'}
-function renderCRM(){const c=calc();root.innerHTML=header()+`<main class="container"><span class="badge">V20.4 Real CRM Performance</span><h1>Vận hành thật + đo hiệu quả</h1><p>Dashboard lead/ngày, CPL, nguồn traffic, pipeline, hoa hồng, báo cáo tháng và xuất Excel/CSV.</p>
+function renderCRM(){const c=calc();root.innerHTML=header()+`<main class="container"><span class="badge">V20.5.1 Real CRM Performance</span><h1>AI tư vấn + chăm sóc lead tự động</h1><p>Dashboard lead/ngày, CPL, nguồn traffic, pipeline, hoa hồng, báo cáo tháng và xuất Excel/CSV.</p>
 <div class="kpis">
 <div class="kpi" onclick="setTimeFilter('today')"><strong>${c.today}</strong><span>Lead hôm nay</span></div>
 <div class="kpi" onclick="setTimeFilter('week')"><strong>${c.week}</strong><span>Lead tuần này</span></div>
@@ -111,5 +111,24 @@ window.backupCRM=function(){download('VayNhanh247_CRM_Backup_V20_4.json',JSON.st
 function download(name,content,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(["\ufeff"+content],{type:type+';charset=utf-8'}));a.download=name;a.click()}
 renderLogin();
 })();
+</script>
+<script src="assets/ai-lead-v20-5.js"></script>
+<script>
+function v205ScoreText(text, phone){
+ text=String(text||'').toLowerCase();let score=40;
+ if(/gấp|hôm nay|cần vay|muốn vay|giải ngân/.test(text))score+=30;
+ if(/cic|nợ xấu|nhóm 2|nhóm 3/.test(text))score+=15;
+ if(/lương|thu nhập|sao kê|chuyển khoản/.test(text))score+=10;
+ if(String(phone||'').replace(/\D/g,'').length>=9)score+=10;
+ if(/tham khảo|tìm hiểu|sau/.test(text))score-=15;
+ return Math.max(0,Math.min(100,score));
+}
+function v205CallScript(service){
+ service=String(service||'').toLowerCase();
+ if(service.includes('cic')||service.includes('nợ xấu'))return 'Kịch bản CIC: hỏi nhóm nợ, đã tất toán chưa, thu nhập hiện tại và thời điểm cần xử lý.';
+ if(service.includes('thẻ'))return 'Kịch bản thẻ: hỏi thu nhập, nhận lương qua đâu, nhu cầu hạn mức và lịch sử tín dụng.';
+ if(service.includes('bảo hiểm'))return 'Kịch bản bảo hiểm: hỏi độ tuổi, ngân sách, nhu cầu bảo vệ sức khỏe/nhân thọ.';
+ return 'Kịch bản vay: hỏi số tiền cần vay, thu nhập, CIC, thời gian cần giải ngân và hồ sơ đang có.';
+}
 </script>
 </body></html>
