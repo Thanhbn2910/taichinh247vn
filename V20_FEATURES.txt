@@ -1,9 +1,0 @@
-V20.0 SEO + Lead thật
-- 50 bài SEO cluster
-- Internal link
-- Category SEO
-- Schema Article/FAQ/Breadcrumb
-
-V20.1 Tracking
-- GA4 events: view_form, click_cta, submit_lead, click_zalo, click_call
-- Dashboard nguồn: SEO/Zalo/Facebook/Direct/UTM

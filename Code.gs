@@ -1,1 +1,0 @@
-function doPost(e){return ContentService.createTextOutput(JSON.stringify({ok:true})).setMimeType(ContentService.MimeType.JSON);}

@@ -1,7 +1,0 @@
-// V19 Security + Anti Spam
-window.VAYNHANH247_SECURITY = {
-  MIN_INTERVAL_MS: 60000,
-  MAX_SUBMIT_PER_HOUR: 5,
-  REQUIRE_PHONE: true,
-  REQUIRE_NAME: true
-};

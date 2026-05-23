@@ -1,8 +1,0 @@
-V19.3 — Sales vận hành
-
-Đã hoàn thiện:
-- Tự tính tỷ lệ chuyển đổi theo pipeline
-- Dashboard lead theo ngày / tuần / tháng
-- Thống kê lead theo nguồn UTM
-- KPI telesale: số lead xử lý, tỷ lệ chốt
-- Doanh thu + hoa hồng thực nhận
