@@ -1,0 +1,21 @@
+/* V21.4 AI Chatbot */
+#v214Chatbot{position:fixed;right:18px;bottom:22px;z-index:2147483000;font-family:Arial,sans-serif}
+#v214Open{background:#0f172a;color:#fff;border:0;border-radius:999px;padding:12px 18px;font-size:15px;font-weight:900;cursor:pointer;box-shadow:0 12px 34px rgba(15,23,42,.28)}
+#v214Panel{display:none;position:absolute;right:0;bottom:58px;width:410px;max-width:calc(100vw - 28px);background:#fff;border:1px solid #dbe5e7;border-radius:22px;overflow:hidden;box-shadow:0 24px 70px rgba(15,23,42,.25)}
+.v214Head{background:#0f766e;color:#fff;padding:13px 15px;display:flex;align-items:center;justify-content:space-between}
+.v214Head small{display:block;font-size:12px;opacity:.9;margin-top:2px}
+#v214Close{background:transparent;color:#fff;border:0;font-size:24px;cursor:pointer}
+#v214Msgs{max-height:320px;overflow:auto;padding:12px;background:#f8fafc}
+.v214Msg{padding:10px 12px;border-radius:14px;margin:8px 0;line-height:1.45;font-size:14px}
+.v214Msg.bot{background:#fff;border:1px solid #e2e8f0}
+.v214Msg.user{background:#d7faea;text-align:right;margin-left:28px}
+.v214Quick{display:flex;gap:6px;flex-wrap:wrap;padding:10px 12px 0;background:#fff}
+.v214Quick button{background:#e7f7f5;color:#0f766e;border:0;border-radius:999px;padding:7px 9px;font-size:12px;font-weight:800;cursor:pointer}
+.v214Input{padding:12px;background:#fff}
+#v214Text{width:100%;min-height:76px;border:1px solid #dbe5e7;border-radius:14px;padding:10px;resize:vertical;font-family:Arial,sans-serif}
+.v214Actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.v214Actions button{border:0;border-radius:12px;padding:11px;font-weight:900;cursor:pointer}
+#v214Send{background:#0f766e;color:#fff}
+#v214Lead{background:#e7f7f5;color:#0f766e}
+.v214Input a{display:block;text-align:center;margin-top:10px;color:#0f766e;font-weight:900;text-decoration:none}
+@media(max-width:600px){#v214Chatbot{right:12px;bottom:16px}#v214Panel{width:calc(100vw - 24px)}}

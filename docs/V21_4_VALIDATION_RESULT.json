@@ -1,0 +1,10 @@
+{
+  "chatbot_js": true,
+  "chatbot_css": true,
+  "index_has_chatbot": true,
+  "history": true,
+  "context": true,
+  "lead_create": true,
+  "multi_intent": true,
+  "full_base": true
+}

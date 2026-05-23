@@ -1,3 +1,9 @@
+V21.4 — AI CHATBOT
+
+AI hoạt động như chatbot: hội thoại nhiều lượt, nhớ ngữ cảnh ngắn, hỏi lại thông tin thiếu, tạo lead từ chat.
+
+Test: index.html?v=214
+
 V21.3.3 — HOTFIX AI WORKING
 
 Sửa AI không hoạt động trên trang chủ.
