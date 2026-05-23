@@ -1,0 +1,12 @@
+{
+  "no_wrong_zalo": true,
+  "call_phone": true,
+  "gas_url": true,
+  "lead_today": true,
+  "cpl": true,
+  "source_report": true,
+  "daily_log": true,
+  "pipeline": true,
+  "export": true,
+  "monthly": true
+}

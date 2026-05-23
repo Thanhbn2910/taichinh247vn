@@ -1,3 +1,23 @@
+V20.4 — VẬN HÀNH THẬT + ĐO HIỆU QUẢ
+
+Đã hoàn thiện:
+- Dashboard lead/ngày thật.
+- CPL = Chi phí / lead.
+- Báo cáo nguồn SEO / Direct / Facebook / Zalo / UTM.
+- Nhật ký lead theo ngày.
+- Pipeline: Lead → Hồ sơ → Giải ngân → Hoa hồng.
+- Biểu đồ lead/ngày trong Admin CRM.
+- Báo cáo tháng.
+- Xuất Excel/CSV.
+- Giữ Zalo tạm tắt, Gọi ngay 0822397836.
+- Giữ Google Sheet + Gmail + CRM.
+
+Link test sau upload:
+https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=204
+https://thanhbn2910.github.io/Vaynhanh247vn/reports/v20-4-performance-dashboard.html?v=204
+https://thanhbn2910.github.io/Vaynhanh247vn/index.html?v=204
+
+--- README cũ ---
 V20.3 — CHẠY KIẾM KHÁCH THẬT
 
 Đã hoàn thiện:
@@ -61,4 +81,5 @@ https://thanhbn2910.github.io/VayNhanh247vn/reports/marketing-dashboard.html?v=2
 https://thanhbn2910.github.io/VayNhanh247vn/admin.html?v=202332
 
 Lưu ý: bản này có nhiều file, nên upload bằng GitHub Desktop.
+
 

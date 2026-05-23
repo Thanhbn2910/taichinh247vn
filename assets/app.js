@@ -28,3 +28,10 @@ document.addEventListener('DOMContentLoaded', function(){
     a.setAttribute('href', 'tel:' + callPhone);
   });
 });
+
+/* V20.4 performance tracking */
+document.addEventListener('DOMContentLoaded', function(){
+  try {
+    if (window.gtag) gtag('event','v20_4_page_ready',{page_location:location.href});
+  } catch(e) {}
+});
