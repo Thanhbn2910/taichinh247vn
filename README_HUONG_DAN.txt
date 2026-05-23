@@ -1,3 +1,7 @@
+V20.2.3 — CRM CLEANPHONE FINAL FIX
+
+Đã sửa lỗi StringcleanPhone_ is not defined trong Admin CRM.
+
 V20.2.2 — CRM STRINGSTRING FINAL FIX
 
 Đã sửa lỗi StringString is not defined trong Admin CRM.
@@ -23,6 +27,6 @@ Test sau upload:
 https://thanhbn2910.github.io/VayNhanh247vn/index.html?v=20222
 https://thanhbn2910.github.io/VayNhanh247vn/posts/index.html?v=20222
 https://thanhbn2910.github.io/VayNhanh247vn/reports/marketing-dashboard.html?v=202
-https://thanhbn2910.github.io/VayNhanh247vn/admin.html?v=20222
+https://thanhbn2910.github.io/VayNhanh247vn/admin.html?v=202332
 
 Lưu ý: bản này có nhiều file, nên upload bằng GitHub Desktop.

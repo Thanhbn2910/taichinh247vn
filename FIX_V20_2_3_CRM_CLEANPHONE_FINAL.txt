@@ -1,0 +1,13 @@
+V20.2.3 — CRM CleanPhone Final Fix
+
+Đã sửa lỗi:
+Không tải được CRM: StringcleanPhone_ is not defined
+
+Đã xử lý:
+- Thay toàn bộ StringcleanPhone_ thành cleanPhone_.
+- Kiểm tra không còn StringString / StringcleanPhone_ trong HTML/JS.
+- Chuẩn hóa xử lý SĐT dạng số hoặc text.
+- Giữ nguyên V20.2: SEO 200 bài, landing, tracking GA4, dashboard marketing, CRM.
+
+Test sau upload:
+https://thanhbn2910.github.io/VayNhanh247vn/admin.html?v=2023
