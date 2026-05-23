@@ -1,0 +1,1 @@
+V21.4.2 HOTFIX CHAT UI: chỉ còn 2 nút nổi Gọi ngay và Chat tư vấn; xóa/ẩn AI/Zalo/chat cũ; chatbox không bung toàn màn.

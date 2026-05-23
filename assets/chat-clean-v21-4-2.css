@@ -1,0 +1,36 @@
+/* V21.4.2 HOTFIX CHAT UI */
+html, body, input, select, textarea, button {
+  font-family: "Segoe UI", Arial, sans-serif !important;
+}
+#v21AiBox,#aiProV2132,#v2133AiRoot,#v214Chatbot,[href*="zalo.me"],.zalo,.zalo-btn,.btn-zalo {
+  display:none!important; visibility:hidden!important; pointer-events:none!important;
+}
+#v2142Actions {
+  position:fixed; right:18px; bottom:22px; z-index:2147483000;
+  display:flex; flex-direction:column; gap:10px; align-items:flex-end;
+}
+#v2142Call,#v2142ChatOpen {
+  border:0; border-radius:999px; padding:12px 18px; font-size:15px; font-weight:900;
+  cursor:pointer; text-decoration:none; box-shadow:0 10px 26px rgba(15,23,42,.20); white-space:nowrap;
+}
+#v2142Call { background:#ea580c; color:#fff; }
+#v2142ChatOpen { background:#0f172a; color:#fff; }
+#v2142Panel {
+  display:none; position:fixed; right:18px; bottom:118px; width:390px; max-width:calc(100vw - 28px);
+  background:#fff; border:1px solid #dbe5e7; border-radius:22px; overflow:hidden;
+  box-shadow:0 24px 70px rgba(15,23,42,.25); z-index:2147483001;
+}
+.v2142Head { background:#0f766e; color:#fff; padding:13px 15px; display:flex; justify-content:space-between; align-items:center; }
+.v2142Head b{display:block;font-size:15px}.v2142Head small{display:block;font-size:12px;opacity:.9;margin-top:2px}
+#v2142Close{background:transparent;border:0;color:#fff;font-size:24px;cursor:pointer;padding:0 4px}
+#v2142Msgs{max-height:300px;overflow:auto;padding:12px;background:#f8fafc}
+.v2142Msg{padding:10px 12px;border-radius:14px;margin:8px 0;line-height:1.45;font-size:14px}
+.v2142Msg.bot{background:#fff;border:1px solid #e2e8f0}.v2142Msg.user{background:#d7faea;text-align:right;margin-left:28px}
+.v2142Quick{display:flex;flex-wrap:wrap;gap:6px;padding:10px 12px 0;background:#fff}
+.v2142Quick button{background:#e7f7f5;color:#0f766e;border:0;border-radius:999px;padding:7px 9px;font-size:12px;font-weight:800;cursor:pointer}
+.v2142Input{padding:12px;background:#fff}
+#v2142Text{width:100%;min-height:76px;border:1px solid #dbe5e7;border-radius:14px;padding:10px;resize:vertical;font-size:14px}
+.v2142Buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+#v2142Send,#v2142Lead{border:0;border-radius:12px;padding:11px;font-weight:900;cursor:pointer}
+#v2142Send{background:#0f766e;color:#fff}#v2142Lead{background:#e7f7f5;color:#0f766e}
+@media(max-width:600px){#v2142Actions{right:12px;bottom:16px}#v2142Panel{right:12px;bottom:112px;width:calc(100vw - 24px)}#v2142Call,#v2142ChatOpen{padding:11px 15px;font-size:14px}}

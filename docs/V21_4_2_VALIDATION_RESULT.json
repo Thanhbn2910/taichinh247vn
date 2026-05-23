@@ -1,0 +1,11 @@
+{
+  "clean_css": true,
+  "clean_js": true,
+  "index_has_clean_js": true,
+  "index_has_clean_css": true,
+  "two_buttons": true,
+  "hide_old_widgets": true,
+  "chatbox_fixed_width": true,
+  "font_fix": true,
+  "full_base": true
+}
