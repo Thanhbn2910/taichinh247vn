@@ -1,0 +1,10 @@
+{
+  "zalo_disabled_config": true,
+  "zalo_phone_blank": true,
+  "call_phone_config": true,
+  "home_patch_exists": true,
+  "index_has_patch": true,
+  "call_label_patch": true,
+  "full_base_admin": true,
+  "full_base_gas": true
+}

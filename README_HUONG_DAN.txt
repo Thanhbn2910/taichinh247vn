@@ -1,3 +1,14 @@
+V21.3 — HOME CLEAN UI
+
+Đã sửa trang chủ:
+- Ẩn Zalo tạm thời.
+- Chỉ giữ một nút AI tư vấn.
+- Nút gọi ngay: Gọi ngay 0822397836.
+
+Test:
+https://thanhbn2910.github.io/Vaynhanh247vn/index.html?v=213
+https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=213
+
 V21.2 — CRM CLEAN UI FIX
 
 Test sau upload: admin.html?v=212
