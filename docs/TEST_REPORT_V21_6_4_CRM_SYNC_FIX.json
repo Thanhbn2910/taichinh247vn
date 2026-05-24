@@ -1,0 +1,15 @@
+{
+  "tests": {
+    "gas_full_replaced": true,
+    "has_create": true,
+    "has_list": true,
+    "has_mail": true,
+    "has_test_func": true,
+    "index_real": true,
+    "admin_real": true,
+    "posts_kept": true,
+    "file_count": true
+  },
+  "failed": [],
+  "status": "PASS"
+}

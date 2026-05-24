@@ -115,7 +115,7 @@
   async function sendLead(lead){
     const GAS_URL = getConfig().GAS_URL;
     if (!GAS_URL) throw new Error('Thiếu GAS_URL trong assets/config.js');
-    const payloads = [{ action:'create', lead: lead }, { action:'addLead', lead: lead }, lead];
+    const payloads = [{ action:'create', lead: lead }];
     let lastError = null;
     for (let i = 0; i < payloads.length; i++){
       try{
@@ -155,7 +155,7 @@
             else btn.textContent = 'Đang gửi...';
           }
           const result = await sendLead(lead);
-          console.log('V21.6.2 lead sent:', result, lead);
+          console.log('V21.6.4 lead sent:', result, lead);
           toast('Đã gửi thông tin thành công. Lead đã chuyển về Sheet/CRM/Gmail.', true);
           form.reset();
         } catch(err){
