@@ -1,6 +1,6 @@
 // V21.6 REAL FULL - SEO lead engine
 (function(){
-  const SOURCES = ['Google SEO','Landing','Blog','Chatbot','Direct'];
+  const SOURCES = ['Google SEO','Landing','Blog','Chat','Direct'];
   function qp(name){ return new URLSearchParams(location.search).get(name) || ''; }
   function detectSource(){
     const path = location.pathname.toLowerCase();
@@ -8,7 +8,7 @@
     if(utm.includes('google')) return 'Google SEO';
     if(path.includes('/landing/')) return 'Landing';
     if(path.includes('/posts/')) return 'Blog';
-    if(qp('source').toLowerCase().includes('chat')) return 'Chatbot';
+    if(qp('source').toLowerCase().includes('chat')) return 'Chat';
     return 'Direct';
   }
   function normalizeIncome(v){
@@ -41,11 +41,11 @@
     const now=new Date();
     const d=days=>{const x=new Date(now);x.setDate(x.getDate()+days);return x.toISOString().slice(0,10);};
     return [
-      {step:'D0 mới',date:d(0),color:'#0f766e'},
-      {step:'D1 gọi',date:d(1),color:'#2563eb'},
-      {step:'D3 nhắc',date:d(3),color:'#f59e0b'},
-      {step:'D7 nuôi',date:d(7),color:'#64748b'},
-      {step:'D14 đóng',date:d(14),color:'#334155'},
+      {step:'D0 Mới',date:d(0),color:'#0f766e'},
+      {step:'D1 Gọi',date:d(1),color:'#2563eb'},
+      {step:'D3 Nhắc',date:d(3),color:'#f59e0b'},
+      {step:'D7 Nuôi',date:d(7),color:'#64748b'},
+      {step:'D14 Chốt',date:d(14),color:'#334155'},
       {step:'Quá hạn',date:'',color:'#dc2626'}
     ];
   }

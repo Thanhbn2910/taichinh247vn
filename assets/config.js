@@ -1,6 +1,6 @@
 // V21 FULL — Realtime AI CRM
 window.VAYNHANH247_CONFIG = {
-  VERSION: 'V21.6.2_GMAIL_HOTFIX',
+  VERSION: 'V21.6.3_STABLE_LOCK',
   GAS_URL: 'https://script.google.com/macros/s/AKfycbwzekJhpMXJVSWA1nBSp-OCA_2FGAtY6j57lj724G4YF7SUiYNmd_WI4fpaVm4M220QuA/exec',
   ADMIN_USER: 'thanhbn29',
   ADMIN_PASS: 'Thanh2509!',

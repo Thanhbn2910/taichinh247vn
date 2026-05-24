@@ -1,12 +1,18 @@
 {
-  "version": "V21.6_REAL_FULL",
+  "version": "V21.6.3_STABLE_LOCK",
+  "source_map": {
+    "seo": "Google SEO",
+    "google": "Google SEO",
+    "landing/*": "Landing",
+    "posts/*": "Blog",
+    "chat": "Chat",
+    "else": "Direct"
+  },
   "sources": [
     "Google SEO",
     "Landing",
     "Blog",
-    "Chatbot",
+    "Chat",
     "Direct"
-  ],
-  "disabled_paid_social": true,
-  "note": "SEO organic search phase only."
+  ]
 }

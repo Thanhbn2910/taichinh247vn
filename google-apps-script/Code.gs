@@ -144,14 +144,14 @@ function v2152AppendLead_(lead) {
     lead.utm_campaign || '',
     lead.utm_content || '',
     lead.sourcePage || lead.url || '',
-    lead.status || 'D0 mới',
+    lead.status || 'D0 Mới',
     lead.aiScore || s.score || '',
     lead.aiGrade || s.grade || '',
     lead.aiTag || s.tag || '',
-    lead.nextCall || 'D1 gọi',
+    lead.nextCall || 'D1 Gọi',
     lead.followupDay || 'D1',
     lead.productSuggest || lead.service || '',
-    lead.timeline || 'D0 mới → D1 gọi → D3 nhắc → D7 nuôi → D14 đóng',
+    lead.timeline || 'D0 Mới → D1 Gọi → D3 Nhắc → D7 Nuôi → D14 Chốt → Quá hạn',
     now
   ];
   sh.appendRow(row);
@@ -236,14 +236,14 @@ function v2162AppendLead_(lead) {
     v2162Val_(lead, ['utm_campaign','Chiến dịch UTM']),
     v2162Val_(lead, ['utm_content','Nội dung UTM']),
     url,
-    v2162Val_(lead, ['status','STATUS']) || 'D0 mới',
+    v2162Val_(lead, ['status','STATUS']) || 'D0 Mới',
     v2162Val_(lead, ['aiScore','AI_SCORE']),
     v2162Val_(lead, ['aiGrade','AI_GRADE']),
     v2162Val_(lead, ['aiTag','AI_TAG']),
-    v2162Val_(lead, ['nextCall','NEXT_CALL']) || 'D1 gọi',
+    v2162Val_(lead, ['nextCall','NEXT_CALL']) || 'D1 Gọi',
     v2162Val_(lead, ['followupDay','FOLLOWUP_DAY']) || 'D1',
     v2162Val_(lead, ['productSuggest','PRODUCT_SUGGEST']) || service,
-    v2162Val_(lead, ['timeline','TIMELINE']) || 'D0 mới → D1 gọi → D3 nhắc → D7 nuôi → D14 đóng',
+    v2162Val_(lead, ['timeline','TIMELINE']) || 'D0 Mới → D1 Gọi → D3 Nhắc → D7 Nuôi → D14 Chốt → Quá hạn',
     now
   ]);
 

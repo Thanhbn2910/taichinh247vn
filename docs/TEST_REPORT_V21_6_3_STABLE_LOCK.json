@@ -1,0 +1,16 @@
+{
+  "tests": {
+    "admin_has_stable_js": true,
+    "stable_js_exists": true,
+    "stable_css_exists": true,
+    "crm_timeline_exists": true,
+    "crm_sources_exists": true,
+    "gas_kept": true,
+    "gmail_hotfix_kept": true,
+    "index_real": true,
+    "posts_kept": true,
+    "file_count": true
+  },
+  "failed": [],
+  "status": "PASS"
+}

@@ -1,11 +1,29 @@
 {
-  "version": "V21.6_REAL_FULL",
+  "version": "V21.6.3_STABLE_LOCK",
   "timeline": [
-    "D0 mới",
-    "D1 gọi",
-    "D3 nhắc",
-    "D7 nuôi",
-    "D14 đóng",
-    "Quá hạn"
+    {
+      "step": "D0 Mới",
+      "color": "green"
+    },
+    {
+      "step": "D1 Gọi",
+      "color": "green"
+    },
+    {
+      "step": "D3 Nhắc",
+      "color": "yellow"
+    },
+    {
+      "step": "D7 Nuôi",
+      "color": "yellow"
+    },
+    {
+      "step": "D14 Chốt",
+      "color": "orange"
+    },
+    {
+      "step": "Quá hạn",
+      "color": "red"
+    }
   ]
 }
