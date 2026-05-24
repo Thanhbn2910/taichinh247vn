@@ -1,3 +1,9 @@
+V21.4.7 — NO FLOATING OVERLAY
+
+Test:
+https://thanhbn2910.github.io/Vaynhanh247vn/index.html?v=2147
+https://thanhbn2910.github.io/Vaynhanh247vn/admin.html?v=2147
+
 V21.4.6 — UI FINAL FIX2
 
 Test:

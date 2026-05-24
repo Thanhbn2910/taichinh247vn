@@ -1,0 +1,109 @@
+/* V21.4.7 — NO FLOATING OVERLAY */
+html,body,input,select,textarea,button {
+  font-family:"Segoe UI",Arial,sans-serif!important;
+}
+
+/* Kill every old floating UI/widget/button */
+#v2146Actions,#v2146Panel,
+#v2145Root,#v2145Panel,
+#v2143Root,#v2143Panel,
+#v2142Actions,#v2142Panel,
+#v214Chatbot,#v2133AiRoot,#v21AiBox,#aiProV2132,
+[href*="zalo.me"],.zalo,.zalo-btn,.btn-zalo {
+  display:none!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+}
+
+/* Defensive: old inline style fixed overlays */
+body > div[style*="position: fixed"],
+body > a[style*="position: fixed"],
+body > button[style*="position: fixed"] {
+  display:none!important;
+}
+
+/* Pull hero/form up without overlay */
+.hero, section.hero, main .hero {
+  padding-top:32px!important;
+  margin-top:0!important;
+}
+.container:first-of-type, main:first-of-type {
+  padding-top:32px!important;
+}
+
+/* Inline actions inserted under content, not floating */
+.v2147-inline-actions {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:14px;
+  align-items:center;
+}
+.v2147-inline-actions a,
+.v2147-inline-actions button {
+  border:0;
+  border-radius:14px;
+  padding:11px 16px;
+  font-weight:900;
+  font-size:14px;
+  cursor:pointer;
+  text-decoration:none;
+}
+.v2147-call { background:#ea580c!important; color:#fff!important; }
+.v2147-chat { background:#0f172a!important; color:#fff!important; }
+
+#v2147ChatBox {
+  display:none;
+  margin-top:12px;
+  width:100%;
+  max-width:360px;
+  background:#fff;
+  border:1px solid #dbe5e7;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(15,23,42,.08);
+}
+.v2147Head {
+  background:#0f766e;
+  color:#fff;
+  padding:9px 11px;
+  font-weight:900;
+  display:flex;
+  justify-content:space-between;
+}
+#v2147Msgs {
+  height:120px;
+  overflow:auto;
+  padding:8px;
+  background:#f8fafc;
+}
+.v2147Msg {
+  padding:8px 9px;
+  border-radius:12px;
+  margin:6px 0;
+  line-height:1.35;
+  font-size:12.5px;
+}
+.v2147Msg.bot { background:#fff; border:1px solid #e2e8f0; }
+.v2147Msg.user { background:#d7faea; text-align:right; }
+.v2147Input { padding:8px; }
+#v2147Text {
+  width:100%;
+  min-height:48px;
+  border:1px solid #dbe5e7;
+  border-radius:12px;
+  padding:8px;
+  resize:none;
+  font-size:12.5px;
+}
+#v2147Send {
+  margin-top:6px;
+  width:100%;
+  background:#0f766e;
+  color:#fff;
+  border:0;
+  border-radius:11px;
+  padding:9px;
+  font-weight:900;
+  cursor:pointer;
+}

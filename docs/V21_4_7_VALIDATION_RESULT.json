@@ -1,0 +1,9 @@
+{
+  "index_has_patch": true,
+  "admin_has_patch": true,
+  "kill_old_widgets": true,
+  "inline_actions": true,
+  "full_phone": true,
+  "hero_up": true,
+  "base_kept": true
+}
