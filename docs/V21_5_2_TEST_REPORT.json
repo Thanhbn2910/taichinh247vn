@@ -1,0 +1,13 @@
+{
+  "tests": {
+    "config_has_gas": true,
+    "submit_js_exists": true,
+    "index_has_submit_js": true,
+    "index_has_form": true,
+    "gas_has_compat": true,
+    "admin_kept": true,
+    "file_count": true
+  },
+  "failed": [],
+  "status": "PASS"
+}

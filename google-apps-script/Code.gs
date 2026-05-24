@@ -114,3 +114,64 @@ function v215ScoreLead_(lead) {
   var tag = grade === 'A' ? '🔥 A nóng' : (grade === 'B' ? '🌤 B trung bình' : '❄ C nuôi');
   return {score: score, grade: grade, tag: tag};
 }
+
+
+// V21_5_2_COMPAT_POST
+function v2152Json_(obj) {
+  return ContentService.createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+function v2152AppendLead_(lead) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sh = ss.getSheetByName('Leads') || ss.insertSheet('Leads');
+  var headers = ['Mã lead','Thời gian','Họ tên','SĐT','Email','Sản phẩm','Thu nhập','Nhu cầu','Ghi chú','Nguồn UTM','Kênh UTM','Chiến dịch UTM','Nội dung UTM','URL','STATUS','AI_SCORE','AI_GRADE','AI_TAG','NEXT_CALL','FOLLOWUP_DAY','PRODUCT_SUGGEST','TIMELINE','Cập nhật lúc'];
+  if (sh.getLastRow() === 0) sh.appendRow(headers);
+  var s = v215ScoreLead_ ? v215ScoreLead_(lead) : {score: lead.aiScore || '', grade: lead.aiGrade || '', tag: lead.aiTag || ''};
+  var now = new Date();
+  var row = [
+    lead.id || ('LD' + now.getTime()),
+    now,
+    lead.name || lead['Họ tên'] || '',
+    lead.phone || lead.sdt || lead['SĐT'] || '',
+    lead.email || '',
+    lead.service || lead.product || lead['Sản phẩm'] || '',
+    lead.income || lead['Thu nhập'] || '',
+    lead.need || lead['Nhu cầu'] || '',
+    lead.note || lead['Ghi chú'] || '',
+    lead.utm_source || '',
+    lead.utm_medium || '',
+    lead.utm_campaign || '',
+    lead.utm_content || '',
+    lead.sourcePage || lead.url || '',
+    lead.status || 'D0 mới',
+    lead.aiScore || s.score || '',
+    lead.aiGrade || s.grade || '',
+    lead.aiTag || s.tag || '',
+    lead.nextCall || 'D1 gọi',
+    lead.followupDay || 'D1',
+    lead.productSuggest || lead.service || '',
+    lead.timeline || 'D0 mới → D1 gọi → D3 nhắc → D7 nuôi → D14 đóng',
+    now
+  ];
+  sh.appendRow(row);
+  try {
+    MailApp.sendEmail({
+      to: Session.getActiveUser().getEmail(),
+      subject: 'Lead mới VayNhanh247: ' + (lead.name || ''),
+      body: 'Lead mới\nTên: ' + (lead.name || '') + '\nSĐT: ' + (lead.phone || '') + '\nNhu cầu: ' + (lead.need || '')
+    });
+  } catch(err) {}
+  return {ok:true, id: row[0], row: sh.getLastRow()};
+}
+
+function doPost(e) {
+  try {
+    var raw = (e && e.postData && e.postData.contents) ? e.postData.contents : '{}';
+    var data = JSON.parse(raw);
+    var lead = data.lead || data;
+    return v2152Json_(v2152AppendLead_(lead));
+  } catch (err) {
+    return v2152Json_({ok:false, error:String(err)});
+  }
+}
