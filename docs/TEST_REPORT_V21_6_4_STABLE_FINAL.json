@@ -1,0 +1,14 @@
+{
+  "tests": {
+    "index_exists_real": true,
+    "admin_exists_real": true,
+    "gas_exists": true,
+    "gas_has_create_list_mail": true,
+    "posts_kept": true,
+    "landing_kept": true,
+    "config_version_locked": true,
+    "file_count_gt_500": true
+  },
+  "failed": [],
+  "status": "PASS"
+}

@@ -1,0 +1,19 @@
+{
+  "version": "V21.6.4_STABLE_FINAL",
+  "locked_at": "2026-05-24T16:52:55.000308",
+  "baseline": "V21.6.4_CRM_SYNC_FIX",
+  "status": "STABLE_LOCKED",
+  "confirmed_by_user": true,
+  "features": [
+    "UI khách giữ nguyên",
+    "Form -> GAS -> Sheet",
+    "Sheet -> CRM list",
+    "Gmail lead notification",
+    "CRM income field",
+    "SEO-only lead sources",
+    "A/B/C scoring",
+    "Timeline D0-D14",
+    "No TikTok/Facebook"
+  ],
+  "next_version": "V21.7_SEO_ENGINE"
+}
