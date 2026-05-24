@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "index_kept_real": true,
+    "admin_kept_real": true,
+    "config_exists": true,
+    "gas_exists": true,
+    "seo_posts_kept": true,
+    "landing_kept": true,
+    "income_fix_kept": true,
+    "lead_engine_v216": true,
+    "crm_sources": true,
+    "sitemap_exists": true,
+    "file_count_gt_500": true
+  },
+  "failed": [],
+  "status": "PASS"
+}

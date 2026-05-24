@@ -68,7 +68,7 @@
       service: getValue(form, ['service','product','san_pham']),
       income: getValue(form, ['income','thu_nhap']),
       need: getValue(form, ['need','nhu_cau','message']),
-      note: 'Lead form V21.5.2',
+      note: 'Lead form V21.6_REAL_FULL',
       sourcePage: location.href,
       utm_source: new URLSearchParams(location.search).get('utm_source') || 'website',
       createdAt: new Date().toISOString(),
@@ -81,6 +81,7 @@
     lead.thu_nhap = lead.income;
     lead['Thu nhập'] = lead.income;
     lead.timeline = timeline();
+    if(window.V247_LEAD_ENGINE_V216){ lead = window.V247_LEAD_ENGINE_V216.enrichLead(lead); }
     return lead;
   }
   async function sendLead(lead){

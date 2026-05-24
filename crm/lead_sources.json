@@ -1,0 +1,12 @@
+{
+  "version": "V21.6_REAL_FULL",
+  "sources": [
+    "Google SEO",
+    "Landing",
+    "Blog",
+    "Chatbot",
+    "Direct"
+  ],
+  "disabled_paid_social": true,
+  "note": "SEO organic search phase only."
+}

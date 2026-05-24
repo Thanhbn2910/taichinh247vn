@@ -139,7 +139,7 @@ function v2152AppendLead_(lead) {
     lead.income || lead.thu_nhap || lead['Thu nhập'] || '',
     lead.need || lead['Nhu cầu'] || '',
     lead.note || lead['Ghi chú'] || '',
-    lead.utm_source || '',
+    lead.source || lead.utm_source || '',
     lead.utm_medium || '',
     lead.utm_campaign || '',
     lead.utm_content || '',
@@ -175,3 +175,7 @@ function doPost(e) {
     return v2152Json_({ok:false, error:String(err)});
   }
 }
+
+
+// V21_6_REAL_FULL_SOURCE_PATCH
+function v216LeadSource_(lead) { lead = lead || {}; return lead.source || lead.utm_source || lead['Nguồn'] || 'Direct'; }

@@ -1,0 +1,34 @@
+{
+  "version": "V21.6_REAL_FULL",
+  "rules": [
+    {
+      "condition": "Thu nhập > 20tr",
+      "score": 20
+    },
+    {
+      "condition": "CIC tốt / nhóm 1",
+      "score": 15
+    },
+    {
+      "condition": "Vay tín chấp",
+      "score": 10
+    },
+    {
+      "condition": "Có SĐT + nhu cầu rõ",
+      "score": 10
+    },
+    {
+      "condition": "Nợ xấu nhóm 2",
+      "score": -15
+    },
+    {
+      "condition": "Nợ xấu nhóm 3-5",
+      "score": -25
+    }
+  ],
+  "grade": {
+    "A": ">=60 🔥 nóng",
+    "B": "35-59 🌤 trung bình",
+    "C": "<35 ❄ nuôi"
+  }
+}
