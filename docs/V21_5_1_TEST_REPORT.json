@@ -1,0 +1,13 @@
+{
+  "tests": {
+    "index_rewritten": true,
+    "customer_css_exists": true,
+    "customer_js_exists": true,
+    "production_js_exists": true,
+    "admin_kept": true,
+    "gas_kept": true,
+    "file_count": true
+  },
+  "failed": [],
+  "status": "PASS"
+}
