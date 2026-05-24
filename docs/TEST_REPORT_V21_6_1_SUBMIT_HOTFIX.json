@@ -1,0 +1,15 @@
+{
+  "tests": {
+    "form_submit_exists": true,
+    "uses_let_lead": true,
+    "uses_let_score": true,
+    "index_has_submit": true,
+    "admin_real": true,
+    "index_real": true,
+    "seo_posts_kept": true,
+    "landing_kept": true,
+    "file_count_gt_500": true
+  },
+  "failed": [],
+  "status": "PASS"
+}
