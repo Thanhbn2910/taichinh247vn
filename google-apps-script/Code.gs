@@ -24,7 +24,7 @@ function doPost(e){
 
     const action = req.action || 'create';
 
-    if(action === 'create' || action === 'addLead'){
+    if(action === 'create' || action === 'addLead' || action === 'affiliateClick'){
       const lead = req.lead || req;
       const result = createLead_(lead);
       return out_(result);

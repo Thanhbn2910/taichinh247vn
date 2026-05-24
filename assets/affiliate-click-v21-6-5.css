@@ -1,0 +1,7 @@
+/* V21.6.5 Affiliate Buttons */
+.aff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+.aff-card{background:#fff;border:1px solid #dbe5e7;border-radius:22px;padding:20px;box-shadow:0 12px 30px rgba(15,23,42,.05)}
+.aff-card h3{margin:0 0 10px;color:#0f172a}
+.aff-card p{color:#475569;line-height:1.55}
+.aff-btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px;padding:12px 16px;background:#0f766e;color:#fff!important;font-weight:900;text-decoration:none;margin-top:10px}
+@media(max-width:900px){.aff-grid{grid-template-columns:1fr}}

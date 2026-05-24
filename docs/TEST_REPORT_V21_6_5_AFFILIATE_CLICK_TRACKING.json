@@ -1,0 +1,14 @@
+{
+  "tests": {
+    "affiliate_js": true,
+    "affiliate_css": true,
+    "index_has_aff": true,
+    "landing_aff": true,
+    "gas_kept": true,
+    "admin_kept": true,
+    "posts_kept": true,
+    "file_count": true
+  },
+  "failed": [],
+  "status": "PASS"
+}
