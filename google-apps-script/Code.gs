@@ -15,12 +15,28 @@ function doPost(e){
   try{
     const req = JSON.parse(e && e.postData && e.postData.contents ? e.postData.contents : '{}');
     const action = req.action || 'create';
-    if(action === 'create') return out_(createLead_(req.lead || req));
+
+    if(action === 'create' || action === 'addLead'){
+      const result = createLead_(req.lead || req);
+
+      try{
+        sendLeadMail_(req.lead || req);
+      }catch(mailErr){
+        result.mail_status = 'error';
+        result.mail_error = String(mailErr.message || mailErr);
+      }
+
+      return out_(result);
+    }
+
     if(action === 'list') return out_({ok:true,data:listLeads_()});
     if(action === 'update') return out_(updateLead_(req.id, req.patch || {}));
     if(action === 'logCare') return out_(logCare_(req.id, req.log || {}));
+
     return out_({ok:false,error:'Unknown action '+action});
-  }catch(err){return out_({ok:false,error:String(err.message||err)});}
+  }catch(err){
+    return out_({ok:false,error:String(err.message||err)});
+  }
 }
 function out_(o){return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON)}
 function ss_(){return SpreadsheetApp.getActiveSpreadsheet()}
@@ -316,6 +332,33 @@ function testSendLeadEmail_V2162() {
     aiGrade: 'A',
     aiTag: '🔥 A nóng',
     sourcePage: 'manual-test'
-  });
+  });function sendLeadMail_(lead){
+  const to = 'buingocthanh29@gmail.com';
+
+  const name = lead.name || lead['Họ tên'] || '';
+  const phone = lead.phone || lead.sdt || lead['SĐT'] || '';
+  const service = lead.service || lead.product || lead['Sản phẩm'] || '';
+  const income = lead.income || lead.thu_nhap || lead['Thu nhập'] || '';
+  const need = lead.need || lead.nhu_cau || lead['Nhu cầu'] || '';
+  const source = lead.source || lead.utm_source || lead['Nguồn'] || 'Direct';
+  const score = lead.aiScore || lead.AI_SCORE || '';
+  const grade = lead.aiGrade || lead.AI_GRADE || '';
+  const tag = lead.aiTag || lead.AI_TAG || '';
+
+  const subject = 'Lead mới VayNhanh247 - ' + (name || phone);
+
+  const body =
+    'Lead mới từ VayNhanh247\n\n' +
+    'Họ tên: ' + name + '\n' +
+    'SĐT: ' + phone + '\n' +
+    'Sản phẩm: ' + service + '\n' +
+    'Thu nhập: ' + income + '\n' +
+    'Nhu cầu: ' + need + '\n' +
+    'Nguồn: ' + source + '\n' +
+    'AI: ' + grade + ' - ' + score + ' - ' + tag + '\n\n' +
+    'Vào CRM để xử lý ngay.';
+
+  MailApp.sendEmail(to, subject, body);
+}
 }
 // ================= END V21_6_2_GMAIL_HOTFIX =================
