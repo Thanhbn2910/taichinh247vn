@@ -1,0 +1,16 @@
+{
+  "tests": {
+    "posts_index_exists": true,
+    "seo_article_count_100": true,
+    "generated_articles_have_form": true,
+    "generated_articles_have_schema": true,
+    "sitemap_has_100_posts": true,
+    "landing_kept": true,
+    "index_kept": true,
+    "admin_kept": true,
+    "submit_js_kept": true,
+    "file_count": true
+  },
+  "failed": [],
+  "status": "PASS"
+}
