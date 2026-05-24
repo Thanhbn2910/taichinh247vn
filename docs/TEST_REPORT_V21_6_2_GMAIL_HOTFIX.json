@@ -1,0 +1,13 @@
+{
+  "tests": {
+    "gas_has_email": true,
+    "gas_has_mailapp": true,
+    "gas_has_test_func": true,
+    "index_real": true,
+    "admin_real": true,
+    "posts_kept": true,
+    "file_count": true
+  },
+  "failed": [],
+  "status": "PASS"
+}

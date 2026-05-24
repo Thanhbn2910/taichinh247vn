@@ -179,3 +179,143 @@ function doPost(e) {
 
 // V21_6_REAL_FULL_SOURCE_PATCH
 function v216LeadSource_(lead) { lead = lead || {}; return lead.source || lead.utm_source || lead['Nguồn'] || 'Direct'; }
+
+
+// ================= V21_6_2_GMAIL_HOTFIX =================
+// Email nhận lead cố định
+const V2162_NOTIFY_EMAIL = 'buingocthanh29@gmail.com';
+
+function v2162Json_(obj) {
+  return ContentService.createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+function v2162GetSheet_() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sh = ss.getSheetByName('Leads');
+  if (!sh) sh = ss.insertSheet('Leads');
+  const headers = [
+    'Mã lead','Thời gian','Họ tên','SĐT','Email','Sản phẩm','Thu nhập','Nhu cầu','Ghi chú',
+    'Nguồn','Nguồn UTM','Kênh UTM','Chiến dịch UTM','Nội dung UTM','URL',
+    'STATUS','AI_SCORE','AI_GRADE','AI_TAG','NEXT_CALL','FOLLOWUP_DAY','PRODUCT_SUGGEST','TIMELINE','Cập nhật lúc'
+  ];
+  if (sh.getLastRow() === 0) sh.appendRow(headers);
+  return sh;
+}
+
+function v2162Val_(lead, keys) {
+  lead = lead || {};
+  for (let i = 0; i < keys.length; i++) {
+    const k = keys[i];
+    if (lead[k] !== undefined && lead[k] !== null && String(lead[k]).trim() !== '') return String(lead[k]).trim();
+  }
+  return '';
+}
+
+function v2162AppendLead_(lead) {
+  lead = lead || {};
+  const sh = v2162GetSheet_();
+  const now = new Date();
+
+  const id = v2162Val_(lead, ['id','leadId','Mã lead']) || ('LD' + now.getTime());
+  const name = v2162Val_(lead, ['name','ho_ten','hoten','Họ tên']);
+  const phone = v2162Val_(lead, ['phone','sdt','tel','SĐT']);
+  const email = v2162Val_(lead, ['email','Email']);
+  const service = v2162Val_(lead, ['service','product','san_pham','Sản phẩm']);
+  const income = v2162Val_(lead, ['income','thu_nhap','Thu nhập']);
+  const need = v2162Val_(lead, ['need','nhu_cau','message','Nhu cầu']);
+  const note = v2162Val_(lead, ['note','Ghi chú']);
+  const source = v2162Val_(lead, ['source','Nguồn']) || v2162Val_(lead, ['utm_source']) || 'Direct';
+  const url = v2162Val_(lead, ['sourcePage','url','URL']);
+
+  sh.appendRow([
+    id, now, name, phone, email, service, income, need, note,
+    source,
+    v2162Val_(lead, ['utm_source','Nguồn UTM']),
+    v2162Val_(lead, ['utm_medium','Kênh UTM']),
+    v2162Val_(lead, ['utm_campaign','Chiến dịch UTM']),
+    v2162Val_(lead, ['utm_content','Nội dung UTM']),
+    url,
+    v2162Val_(lead, ['status','STATUS']) || 'D0 mới',
+    v2162Val_(lead, ['aiScore','AI_SCORE']),
+    v2162Val_(lead, ['aiGrade','AI_GRADE']),
+    v2162Val_(lead, ['aiTag','AI_TAG']),
+    v2162Val_(lead, ['nextCall','NEXT_CALL']) || 'D1 gọi',
+    v2162Val_(lead, ['followupDay','FOLLOWUP_DAY']) || 'D1',
+    v2162Val_(lead, ['productSuggest','PRODUCT_SUGGEST']) || service,
+    v2162Val_(lead, ['timeline','TIMELINE']) || 'D0 mới → D1 gọi → D3 nhắc → D7 nuôi → D14 đóng',
+    now
+  ]);
+
+  let mail_status = 'not_sent';
+  let mail_error = '';
+
+  try {
+    const subject = 'Lead mới VayNhanh247 - ' + (name || phone || id);
+    const body =
+      'Lead mới từ VayNhanh247\n\n' +
+      'Mã lead: ' + id + '\n' +
+      'Thời gian: ' + now + '\n' +
+      'Họ tên: ' + name + '\n' +
+      'SĐT: ' + phone + '\n' +
+      'Email: ' + email + '\n' +
+      'Sản phẩm: ' + service + '\n' +
+      'Thu nhập: ' + income + '\n' +
+      'Nhu cầu: ' + need + '\n' +
+      'Nguồn: ' + source + '\n' +
+      'AI: ' + v2162Val_(lead, ['aiGrade','AI_GRADE']) + ' - ' + v2162Val_(lead, ['aiScore','AI_SCORE']) + ' - ' + v2162Val_(lead, ['aiTag','AI_TAG']) + '\n' +
+      'URL: ' + url + '\n';
+    MailApp.sendEmail(V2162_NOTIFY_EMAIL, subject, body);
+    mail_status = 'sent';
+  } catch (err) {
+    mail_status = 'error';
+    mail_error = String(err);
+  }
+
+  return {
+    ok: true,
+    id: id,
+    row: sh.getLastRow(),
+    email_to: V2162_NOTIFY_EMAIL,
+    mail_status: mail_status,
+    mail_error: mail_error
+  };
+}
+
+function doPost(e) {
+  try {
+    const raw = (e && e.postData && e.postData.contents) ? e.postData.contents : '{}';
+    let data = {};
+    try { data = JSON.parse(raw); } catch (err) { data = {}; }
+    const lead = data.lead || data;
+    return v2162Json_(v2162AppendLead_(lead));
+  } catch (err) {
+    return v2162Json_({ ok:false, error:String(err), email_to:V2162_NOTIFY_EMAIL });
+  }
+}
+
+function doGet(e) {
+  return v2162Json_({
+    ok:true,
+    version:'V21.6.2_GMAIL_HOTFIX',
+    email_to: V2162_NOTIFY_EMAIL,
+    message:'Apps Script is running. POST creates lead and sends Gmail.'
+  });
+}
+
+function testSendLeadEmail_V2162() {
+  return v2162AppendLead_({
+    id: 'TEST-' + new Date().getTime(),
+    name: 'Test Gmail V21.6.2',
+    phone: '0912345678',
+    service: 'Vay tín chấp',
+    income: '25 triệu',
+    need: 'Test gửi Gmail từ Apps Script',
+    source: 'Direct',
+    aiScore: 78,
+    aiGrade: 'A',
+    aiTag: '🔥 A nóng',
+    sourcePage: 'manual-test'
+  });
+}
+// ================= END V21_6_2_GMAIL_HOTFIX =================

@@ -19,8 +19,8 @@
     if(s.includes('tr')||s.includes('triệu')||s.includes('trieu')) n*=1000000;
     return n;
   }
-  function scoreLead(inputLead){
-    let lead = inputLead || {};
+  function scoreLead(lead){
+    lead=lead||{};
     const text=JSON.stringify(lead).toLowerCase();
     let score=30;
     const income=normalizeIncome(lead.income||lead.thu_nhap||lead['Thu nhập']);
