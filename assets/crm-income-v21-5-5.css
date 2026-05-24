@@ -1,0 +1,31 @@
+/* V21.5.5 CRM Income Field */
+.v2155-income-head {
+  min-width: 110px !important;
+}
+.v2155-income-cell {
+  min-width: 110px !important;
+  color: #0f766e !important;
+  font-weight: 800 !important;
+}
+.v2155-income-cell b {
+  display: inline-block;
+  background: #ecfdf5;
+  color: #0f766e;
+  border-radius: 999px;
+  padding: 7px 10px;
+}
+.v2155-income-badge {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #ecfdf5;
+  color: #0f766e;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 800;
+}
+.v2155-income-badge span {
+  color: #64748b;
+  font-size: 12px;
+}

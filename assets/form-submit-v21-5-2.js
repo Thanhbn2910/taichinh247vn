@@ -78,6 +78,8 @@
     lead.aiScore = s.score;
     lead.aiGrade = s.grade;
     lead.aiTag = s.tag;
+    lead.thu_nhap = lead.income;
+    lead['Thu nhập'] = lead.income;
     lead.timeline = timeline();
     return lead;
   }

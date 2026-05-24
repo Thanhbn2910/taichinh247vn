@@ -1,0 +1,14 @@
+{
+  "tests": {
+    "admin_has_income_js": true,
+    "admin_has_income_css": true,
+    "income_js_exists": true,
+    "income_css_exists": true,
+    "form_income_alias": true,
+    "gas_kept": true,
+    "seo_kept": true,
+    "file_count": true
+  },
+  "failed": [],
+  "status": "PASS"
+}

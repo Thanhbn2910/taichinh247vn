@@ -102,7 +102,7 @@ function v215ScoreLead_(lead) {
   lead = lead || {};
   var text = JSON.stringify(lead).toLowerCase();
   var score = 30;
-  var income = Number(String(lead.income || lead['Thu nhập'] || '').replace(/[^0-9]/g,'')) || 0;
+  var income = Number(String(lead.income || lead.thu_nhap || lead['Thu nhập'] || '').replace(/[^0-9]/g,'')) || 0;
   if (income > 20000000) score += 20;
   if (text.indexOf('cic tốt') >= 0 || text.indexOf('nhóm 1') >= 0) score += 15;
   if (text.indexOf('vay tín chấp') >= 0) score += 10;
@@ -136,7 +136,7 @@ function v2152AppendLead_(lead) {
     lead.phone || lead.sdt || lead['SĐT'] || '',
     lead.email || '',
     lead.service || lead.product || lead['Sản phẩm'] || '',
-    lead.income || lead['Thu nhập'] || '',
+    lead.income || lead.thu_nhap || lead['Thu nhập'] || '',
     lead.need || lead['Nhu cầu'] || '',
     lead.note || lead['Ghi chú'] || '',
     lead.utm_source || '',
