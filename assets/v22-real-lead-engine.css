@@ -1,0 +1,68 @@
+
+/* V22 REAL LEAD ENGINE */
+
+.v22-grid{
+ display:grid;
+ grid-template-columns:repeat(5,1fr);
+ gap:14px;
+ margin:18px 0;
+}
+
+.v22-card{
+ background:#fff;
+ border:1px solid #dbe5e7;
+ border-radius:18px;
+ padding:18px;
+}
+
+.v22-card b{
+ display:block;
+ font-size:28px;
+ color:#0f766e;
+}
+
+.v22-card span{
+ color:#64748b;
+ font-weight:700;
+}
+
+.v22-script{
+ margin-top:10px;
+ padding:12px;
+ border-radius:14px;
+ background:#f8fafc;
+ border:1px solid #e2e8f0;
+ line-height:1.7;
+ font-size:13px;
+}
+
+.v22-status{
+ display:flex;
+ flex-wrap:wrap;
+ gap:6px;
+ margin-top:8px;
+}
+
+.v22-status span{
+ background:#ecfeff;
+ color:#155e75;
+ padding:6px 10px;
+ border-radius:999px;
+ font-size:12px;
+ font-weight:800;
+}
+
+form input,form select,form textarea{
+ width:100%;
+ box-sizing:border-box;
+ margin-bottom:12px;
+ border-radius:14px;
+ padding:12px 14px;
+ border:1px solid #d5e3e6;
+}
+
+@media(max-width:760px){
+ .v22-grid{
+  grid-template-columns:1fr;
+ }
+}
