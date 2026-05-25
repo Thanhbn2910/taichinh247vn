@@ -1,0 +1,14 @@
+{
+  "tests": {
+    "six_posts": true,
+    "five_landing": true,
+    "cta_present": true,
+    "form_present": true,
+    "schema_present": true,
+    "sitemap_updated": true,
+    "admin_kept": true,
+    "file_count": true
+  },
+  "failed": [],
+  "status": "PASS"
+}

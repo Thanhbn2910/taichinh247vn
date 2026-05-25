@@ -1,0 +1,17 @@
+
+/* V22.1.1 Content Fix */
+.money-article{max-width:1120px;margin:0 auto;padding:32px 20px}
+.money-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
+.money-card{background:#fff;border:1px solid #dbe5e7;border-radius:24px;padding:28px;box-shadow:0 14px 38px rgba(15,23,42,.05)}
+.money-card h1{font-size:40px;line-height:1.15;margin:0 0 14px;color:#0f172a}
+.money-card h2{margin-top:28px;color:#0f172a}
+.money-card p,.money-card li{line-height:1.75;color:#334155}
+.money-badge{display:inline-block;background:#dcfce7;color:#0f766e;border:1px solid #86efac;border-radius:999px;padding:8px 12px;font-weight:900;margin:0 8px 12px 0}
+.money-cta{background:#ecfdf5;border:1px solid #bbf7d0;border-radius:20px;padding:20px;margin:24px 0}
+.money-cta a,.money-btn{display:inline-flex;background:#0f766e;color:#fff!important;text-decoration:none;border-radius:14px;padding:12px 16px;font-weight:900;margin:6px 8px 6px 0}
+.money-call{background:#ea580c!important}
+.money-links{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.money-links a{background:#f8fafc;border:1px solid #e2e8f0;color:#0f172a!important;border-radius:999px;padding:8px 12px;text-decoration:none;font-weight:800}
+.money-form-wrap{position:sticky;top:96px}
+.money-note{font-size:14px;color:#64748b}
+@media(max-width:900px){.money-layout{grid-template-columns:1fr}.money-card h1{font-size:32px}.money-form-wrap{position:static}}
