@@ -1,0 +1,21 @@
+{
+  "tests": {
+    "base_index_real": true,
+    "admin_kept": true,
+    "seo_engine_index": true,
+    "pillar_pages": true,
+    "generated_posts": true,
+    "landing_intent_pages": true,
+    "schemas_present": true,
+    "sitemap_exists": true,
+    "robots_exists": true,
+    "tracking_js": true,
+    "form_submit_kept": true,
+    "gas_kept": true,
+    "file_count": true
+  },
+  "failed": [],
+  "status": "PASS",
+  "generated_posts": 27,
+  "generated_clusters": 5
+}

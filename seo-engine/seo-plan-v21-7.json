@@ -1,0 +1,71 @@
+{
+  "version": "V21.7_SEO_ENGINE",
+  "goal": "Google -> SEO article -> landing -> form -> CRM",
+  "clusters": [
+    {
+      "key": "cic-no-xau",
+      "name": "CIC / nợ xấu",
+      "pillar": "CIC và nợ xấu: hướng dẫn kiểm tra, xử lý và chuẩn bị hồ sơ vay",
+      "keywords": [
+        "Nợ xấu nhóm 2 có vay được không? Cách xử lý CIC 2026",
+        "Bao lâu xóa CIC? Cách kiểm tra lịch sử tín dụng",
+        "Check CIC online miễn phí có chính xác không?",
+        "Nợ xấu dưới 10 triệu có vay được không?",
+        "CIC nhóm 3 xử lý thế nào trước khi đăng ký vay",
+        "Nợ xấu đã tất toán bao lâu thì vay lại được"
+      ]
+    },
+    {
+      "key": "vay-tin-chap",
+      "name": "Vay tín chấp",
+      "pillar": "Vay tín chấp: điều kiện, thu nhập, CIC và hồ sơ cần chuẩn bị",
+      "keywords": [
+        "Thu nhập 7 triệu vay được bao nhiêu? Cách tính hạn mức",
+        "Công nhân vay tín chấp cần chuẩn bị hồ sơ gì?",
+        "Không chứng minh thu nhập có vay được không?",
+        "Vay giải ngân trong ngày cần lưu ý gì?",
+        "Lương tiền mặt có vay tín chấp được không?",
+        "CIC nhóm 1 vay tín chấp có dễ duyệt không?"
+      ]
+    },
+    {
+      "key": "the-tin-dung",
+      "name": "Thẻ tín dụng",
+      "pillar": "Thẻ tín dụng: điều kiện mở thẻ, thu nhập và lưu ý CIC",
+      "keywords": [
+        "Mở thẻ tín dụng không cần chứng minh thu nhập được không?",
+        "Nợ xấu có mở thẻ tín dụng được không?",
+        "Thu nhập bao nhiêu mở được thẻ tín dụng?",
+        "Thẻ tín dụng cho người mới đi làm cần điều kiện gì?",
+        "CIC tốt có lợi gì khi mở thẻ tín dụng?"
+      ]
+    },
+    {
+      "key": "bao-hiem",
+      "name": "Bảo hiểm",
+      "pillar": "Bảo hiểm cá nhân: chọn sản phẩm theo nhu cầu bảo vệ và tài chính",
+      "keywords": [
+        "Bảo hiểm nhân thọ có nên mua không?",
+        "Bảo hiểm sức khỏe cá nhân phù hợp với ai?",
+        "Chọn bảo hiểm theo thu nhập như thế nào?",
+        "Bảo hiểm trong kế hoạch tài chính cá nhân",
+        "Những lưu ý khi mua bảo hiểm cá nhân"
+      ]
+    },
+    {
+      "key": "tai-chinh-ca-nhan",
+      "name": "Tài chính cá nhân",
+      "pillar": "Tài chính cá nhân: quản lý tiền, nợ, tín dụng và bảo vệ tài chính",
+      "keywords": [
+        "Quản lý tài chính cá nhân cho người mới bắt đầu",
+        "Cách giảm áp lực nợ và sắp xếp khoản vay",
+        "Cách xây dựng lịch sử tín dụng tốt",
+        "Lập kế hoạch trả nợ cá nhân hiệu quả",
+        "Kiểm soát chi tiêu hàng tháng bằng nguyên tắc đơn giản"
+      ]
+    }
+  ],
+  "no_tiktok": true,
+  "no_facebook": true,
+  "affiliate_priority": "later_phase"
+}
