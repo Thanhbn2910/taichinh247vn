@@ -1,0 +1,8 @@
+
+.v219-sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #dbe5e7;box-shadow:0 -10px 30px rgba(15,23,42,.15);z-index:99999;display:none;gap:10px;padding:10px}
+.v219-sticky a{flex:1;text-align:center;text-decoration:none;border-radius:14px;padding:12px 10px;font-weight:900}
+.v219-call{background:#ea580c;color:#fff!important}.v219-check{background:#0f766e;color:#fff!important}
+.v219-dash{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:16px 0}.v219-kpi{background:#fff;border:1px solid #dbe5e7;border-radius:18px;padding:14px}.v219-kpi b{display:block;font-size:24px;color:#0f766e}
+.v219-status-badge{display:inline-block;border-radius:999px;padding:7px 10px;background:#eef2ff;color:#3730a3;font-weight:900;font-size:12px;margin:4px}
+.v219-script{background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:12px;margin-top:8px;color:#334155}
+@media(max-width:760px){.v219-sticky{display:flex}body{padding-bottom:72px!important}.v219-dash{grid-template-columns:1fr}}

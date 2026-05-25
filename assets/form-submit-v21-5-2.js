@@ -87,7 +87,12 @@
       service: getValue(form, ['service', 'product', 'san_pham']),
       income: getValue(form, ['income', 'thu_nhap']),
       need: getValue(form, ['need', 'nhu_cau', 'message']),
-      note: 'Lead form V21.6.1 submit hotfix',
+      note: 'Lead form V21.9 Conversion Engine',
+      job: getValue(form, ['job','Nghề nghiệp']),
+      cic_status: getValue(form, ['cic_status','Tình trạng CIC']),
+      loan_purpose: getValue(form, ['loan_purpose','Mục đích vay']),
+      loan_amount: getValue(form, ['loan_amount','Số tiền cần']),
+      province: getValue(form, ['province','Tỉnh/TP']),
       source: detectSource(),
       sourcePage: location.href,
       utm_source: new URLSearchParams(location.search).get('utm_source') || detectSource(),
@@ -99,6 +104,12 @@
     lead['SĐT'] = lead.phone;
     lead['Nhu cầu'] = lead.need;
     lead['Sản phẩm'] = lead.service;
+    lead['Nghề nghiệp'] = lead.job;
+    lead['Tình trạng CIC'] = lead.cic_status;
+    lead['Mục đích vay'] = lead.loan_purpose;
+    lead['Số tiền cần'] = lead.loan_amount;
+    lead['Tỉnh/TP'] = lead.province;
+    lead.need = [lead.need, lead.job, lead.cic_status, lead.loan_purpose, lead.loan_amount, lead.province].filter(Boolean).join(' | ');
     if (window.V247_LEAD_ENGINE_V216 && window.V247_LEAD_ENGINE_V216.enrichLead){
       lead = window.V247_LEAD_ENGINE_V216.enrichLead(lead);
     } else {

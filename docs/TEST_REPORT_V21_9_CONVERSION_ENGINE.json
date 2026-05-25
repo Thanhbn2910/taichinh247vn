@@ -1,0 +1,13 @@
+{
+  "tests": {
+    "css": true,
+    "js": true,
+    "index": true,
+    "admin": true,
+    "posts": true,
+    "landing": true,
+    "files": true
+  },
+  "failed": [],
+  "status": "PASS"
+}
