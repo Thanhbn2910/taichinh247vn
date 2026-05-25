@@ -1,0 +1,12 @@
+{
+  "tests": {
+    "v22_patch_exists": true,
+    "login_guard": true,
+    "admin_kept": true,
+    "index_kept": true,
+    "posts_kept": true,
+    "file_count": true
+  },
+  "failed": [],
+  "status": "PASS"
+}

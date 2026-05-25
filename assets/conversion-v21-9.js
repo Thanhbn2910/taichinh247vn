@@ -1,5 +1,11 @@
 // V21.9.1 Layout Fix
 (function(){
+
+function v219IsLoginScreen(){
+  const text=(document.body&&document.body.textContent||'').toLowerCase();
+  return !!document.querySelector('input[type="password"]') && (text.includes('đăng nhập crm') || text.includes('đăng nhập'));
+}
+
   const PHONE=(window.VAYNHANH247_CONFIG&&window.VAYNHANH247_CONFIG.CALL_PHONE)||'0822397836';
 
   function field(name,label,options){
@@ -69,6 +75,7 @@
 
   function crm(){
     if(!location.pathname.toLowerCase().includes('admin')) return;
+    if(v219IsLoginScreen()){document.querySelectorAll('#v219Dash,.v219-dash').forEach(e=>e.remove());return;}
     if(!document.getElementById('v219Dash')){
       const dash=document.createElement('div');
       dash.id='v219Dash';dash.className='v219-dash';
@@ -79,6 +86,7 @@
   }
 
   function updateCrm(){
+    if(v219IsLoginScreen()){document.querySelectorAll('#v219Dash,.v219-dash').forEach(e=>e.remove());return;}
     const rows=[...document.querySelectorAll('table tbody tr')].filter(r=>!r.textContent.includes('Chưa có lead'));
     const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v};
     let called=0,hen=0,chot=0;

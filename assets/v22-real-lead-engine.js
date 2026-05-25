@@ -1,9 +1,38 @@
-
-// V22 REAL LEAD ENGINE
+// V22.1.2 CRM Login Dashboard Fix
 (function(){
 
+function isAdminPage(){
+  return location.pathname.toLowerCase().includes('admin');
+}
+
+function isLoginScreen(){
+  const bodyText = (document.body && document.body.textContent || '').toLowerCase();
+  const hasLoginText = bodyText.includes('đăng nhập crm') || bodyText.includes('đăng nhập');
+  const hasPassword = !!document.querySelector('input[type="password"]');
+  const hasLeadTable = !!document.querySelector('table tbody tr');
+  return hasPassword && hasLoginText && !hasLeadTable;
+}
+
+function removeDashboardsOnLogin(){
+  if(!isAdminPage()) return;
+  if(!isLoginScreen()) return;
+  document.querySelectorAll('#v22Dash,#v219Dash,.v22-grid,.v219-dash').forEach(el=>{
+    const parent = el.closest('section,div') || el;
+    parent.remove();
+  });
+}
+
 function addDashboard(){
-  if(!location.pathname.toLowerCase().includes('admin')) return;
+  if(!isAdminPage()) return;
+  if(isLoginScreen()){
+    removeDashboardsOnLogin();
+    return;
+  }
+
+  // Remove duplicated old dashboards before adding single V22 dashboard
+  document.querySelectorAll('#v219Dash,.v219-dash').forEach(el=>el.remove());
+  document.querySelectorAll('#v22Dash').forEach((el,i)=>{ if(i>0) el.remove(); });
+
   if(document.getElementById('v22Dash')) return;
 
   const wrap=document.createElement('section');
@@ -17,11 +46,22 @@ function addDashboard(){
       <div class="v22-card"><b id="v22Rate">0%</b><span>Tỷ lệ chốt</span></div>
     </div>
   `;
-  (document.querySelector('main')||document.body).prepend(wrap);
+  const main = document.querySelector('main') || document.querySelector('.container') || document.body;
+  main.prepend(wrap);
 }
 
 function updateDashboard(){
-  const rows=[...document.querySelectorAll('table tbody tr')];
+  if(!isAdminPage()) return;
+  if(isLoginScreen()){
+    removeDashboardsOnLogin();
+    return;
+  }
+
+  addDashboard();
+
+  const rows=[...document.querySelectorAll('table tbody tr')]
+    .filter(r=>!r.textContent.includes('Chưa có lead') && r.children.length > 1);
+
   let called=0,hen=0,chot=0;
 
   rows.forEach(r=>{
@@ -78,6 +118,7 @@ function updateDashboard(){
 }
 
 function enhanceLeadForm(){
+  if(isAdminPage()) return;
   document.querySelectorAll('form').forEach(form=>{
     const isLead=form.id==='lead-form'||form.querySelector('[name="phone"],[name="sdt"]');
     if(!isLead) return;
@@ -108,11 +149,13 @@ function enhanceLeadForm(){
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
+  removeDashboardsOnLogin();
   addDashboard();
   updateDashboard();
   enhanceLeadForm();
 });
 
+setTimeout(()=>{removeDashboardsOnLogin();addDashboard();updateDashboard();},800);
 setInterval(updateDashboard,3000);
 
 })();

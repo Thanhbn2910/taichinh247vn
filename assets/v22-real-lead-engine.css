@@ -66,3 +66,11 @@ form input,form select,form textarea{
   grid-template-columns:1fr;
  }
 }
+
+/* V22.1.2: dashboard appears only inside CRM after login */
+.login #v22Dash,
+.login #v219Dash,
+.login .v22-grid,
+.login .v219-dash{
+  display:none!important;
+}
