@@ -1,0 +1,12 @@
+{
+  "tests": {
+    "index_has_menu": true,
+    "css_exists": true,
+    "post_links": true,
+    "admin_kept": true,
+    "posts_kept": true,
+    "file_count": true
+  },
+  "failed": [],
+  "status": "PASS"
+}

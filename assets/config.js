@@ -1,6 +1,6 @@
 // V21 FULL — Realtime AI CRM
 window.VAYNHANH247_CONFIG = {
-  VERSION: 'V22.2.1_SEO_30_REAL_ARTICLES_FULL',
+  VERSION: 'V22.2.2_CONTENT_MENU_UI',
   GAS_URL: 'https://script.google.com/macros/s/AKfycbwzekJhpMXJVSWA1nBSp-OCA_2FGAtY6j57lj724G4YF7SUiYNmd_WI4fpaVm4M220QuA/exec',
   ADMIN_USER: 'thanhbn29',
   ADMIN_PASS: 'Thanh2509!',
