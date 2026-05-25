@@ -6,3 +6,18 @@
 .v219-status-badge{display:inline-block;border-radius:999px;padding:7px 10px;background:#eef2ff;color:#3730a3;font-weight:900;font-size:12px;margin:4px}
 .v219-script{background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:12px;margin-top:8px;color:#334155}
 @media(max-width:760px){.v219-sticky{display:flex}body{padding-bottom:72px!important}.v219-dash{grid-template-columns:1fr}}
+
+
+/* V21.9.1_LAYOUT_FIX */
+.v219-lead-form,form#lead-form,.lead-card,.form-card,.hero form{width:100%!important;max-width:100%!important;display:block!important;overflow:visible!important;box-sizing:border-box!important}
+.v219-field{display:flex!important;flex-direction:column!important;gap:7px!important;margin-bottom:12px!important;font-weight:800!important}
+.v219-lead-form input,.v219-lead-form select,.v219-lead-form textarea{width:100%!important;box-sizing:border-box!important;border:1px solid #d5e3e6!important;border-radius:14px!important;padding:12px 14px!important;background:#fff!important}
+.v219-form-cta{clear:both!important;width:100%!important;margin-top:16px!important;display:flex!important;gap:12px!important;flex-wrap:wrap!important}
+.v219-form-cta a,.v219-form-cta button{flex:1 1 150px!important;min-width:145px!important;border:0!important;border-radius:14px!important;padding:12px 14px!important;font-weight:900!important;text-align:center!important;text-decoration:none!important;white-space:nowrap!important}
+.v219-call{background:#ea580c!important;color:#fff!important}.v219-check{background:#0f766e!important;color:#fff!important}.v219-chat{background:#0f172a!important;color:#fff!important}
+.hero,.hero>*,.hero .lead-card,.hero form,.form-box,.hero-form,.hero-right{overflow:visible!important}
+.v219-sticky{position:fixed!important;left:0!important;right:0!important;bottom:0!important;background:#fff!important;border-top:1px solid #dbe5e7!important;box-shadow:0 -10px 30px rgba(15,23,42,.15)!important;z-index:99999!important;display:none;gap:10px!important;padding:10px!important}
+.v219-sticky a{flex:1!important;text-align:center!important;text-decoration:none!important;border-radius:14px!important;padding:12px 10px!important;font-weight:900!important}
+.v219-dash{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:16px 0}.v219-kpi{background:#fff;border:1px solid #dbe5e7;border-radius:18px;padding:14px}.v219-kpi b{display:block;font-size:24px;color:#0f766e}
+.v219-status-badge{display:inline-block;border-radius:999px;padding:7px 10px;background:#eef2ff;color:#3730a3;font-weight:900;font-size:12px;margin:4px}.v219-script{background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:12px;margin-top:8px;color:#334155}
+@media(max-width:760px){.v219-sticky{display:flex!important}body{padding-bottom:72px!important}.v219-dash{grid-template-columns:1fr!important}.v219-form-cta{display:none!important}.hero{grid-template-columns:1fr!important}}

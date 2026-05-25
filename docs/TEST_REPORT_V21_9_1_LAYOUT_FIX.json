@@ -1,0 +1,14 @@
+{
+  "tests": {
+    "js_safe": true,
+    "css_fix": true,
+    "index_has": true,
+    "admin_real": true,
+    "index_real": true,
+    "posts_kept": true,
+    "landing_kept": true,
+    "file_count": true
+  },
+  "failed": [],
+  "status": "PASS"
+}
