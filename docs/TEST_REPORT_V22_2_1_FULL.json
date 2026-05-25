@@ -1,0 +1,15 @@
+{
+  "tests": {
+    "index_exists": true,
+    "admin_exists": true,
+    "assets_exists": true,
+    "landing_exists": true,
+    "posts_count": true,
+    "posts_index": true,
+    "gas_exists": true,
+    "sitemap_has_posts": true,
+    "file_count": true
+  },
+  "failed": [],
+  "status": "PASS"
+}
